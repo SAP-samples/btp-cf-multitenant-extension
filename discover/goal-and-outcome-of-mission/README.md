@@ -11,7 +11,7 @@
 - Database Credentials Caching for faster access
 - Tenant provisioning
 - Re-use service dependency callback implementation
-- Usage of SAP Cloud SDK to read/write data from S/4HANA
+- Usage of SAP Cloud SDK to read/write data from SAP S/4HANA
 
 
 ## Develop the Multitenant Application
