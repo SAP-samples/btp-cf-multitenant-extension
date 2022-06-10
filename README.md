@@ -42,7 +42,7 @@
    4. [Create Route](./subscribe/route-creation/README.md)
    5. Assign Roles
       1. [Assign Roles](./subscribe/assign-roles/README.md)
-      2. [Set up SAP Identity and Authentication Service](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/custom-idp/README.md)
+      2. [Set up SAP Identity and Authentication Service](./subscribe/idp/README.md)
    6. [Run the Application](./subscribe/run-application/README.md)
    7. [Test the Multitenancy](./subscribe/run-application/README.md#running-the-application)
    8. Video
