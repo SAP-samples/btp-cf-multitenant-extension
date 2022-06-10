@@ -1,0 +1,22 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "easyfranchise",
+    "namespaceUI5": "com.sap",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": false,
+    "codeassist": true,
+    "namespaceURI": "com/sap",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

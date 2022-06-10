@@ -1,0 +1,7 @@
+---
+applications:
+- name: ui
+  host: referenceapps-ga-saas2-dev-ui
+  memory: 64M
+  path: webapp/
+  buildpack: staticfile_buildpack

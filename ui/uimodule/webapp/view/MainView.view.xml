@@ -1,0 +1,123 @@
+<mvc:View controllerName="com.sap.easyfranchise.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" 
+xmlns:tnt="sap.tnt"
+xmlns:core="sap.ui.core">
+<tnt:ToolHeader id="_IDGenToolHeader1">
+    <Image id="_IDGenImage1" height="2rem" width="4rem" />
+    <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+    <Text id="_IDGenText1" wrapping="false" />
+    <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+    <Button icon="sap-icon://synchronize" type="Transparent" press="onRefreshPress" ariaLabelledBy="actionButtonLabel"/>
+</tnt:ToolHeader> 
+<Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}" showHeader="false">
+                    <customHeader>
+                        <Toolbar>
+                            <Title text="{i18n>title}" level="H2"/>
+                            <ToolbarSpacer/>
+                            <Button icon="sap-icon://synchronize" type="Transparent" press="onRefreshPress" ariaLabelledBy="actionButtonLabel"/>
+                        </Toolbar>
+                    </customHeader>
+                    <content>
+                      
+                        <IconTabBar id="iconTabBar1" class="sapUiResponsiveContentPadding">
+                            <items>
+                                <IconTabFilter key="newFranchise" text="New Franchise">
+                                    <Table id="francisetable" inset="false" items="{
+                                        path: 'newFranchiseModel>/'
+                                    }">
+                                        <headerToolbar>
+                                            <OverflowToolbar>
+                                                <content>
+                                                    <Title text="Newly Created Franchises" level="H2" />
+                                                    <ToolbarSpacer />
+                                                </content>
+                                            </OverflowToolbar>
+                                        </headerToolbar>
+                                        <columns>
+                                            <Column width="12em">
+                                                <Text text="ID" />
+                                            </Column>
+                                            <Column minScreenWidth="Tablet" demandPopin="true">
+                                                <Text text="Name" />
+                                            </Column>
+                                            <Column>
+                                                <Text text="Created On" />
+        
+                                            </Column>
+                                            <Column>
+                                                <Text text="Mentor" />
+                                                
+                                            </Column>
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem vAlign="Middle">
+                                                <cells>
+                                                    <Text text="{newFranchiseModel>BUSINESSPARTNERID}" />
+                                                    <ObjectIdentifier title="{newFranchiseModel>BUSINESSPARTNERNAME}" />
+                                                    <Text text="{newFranchiseModel>UPDATED_ON}" />
+                                                        <ComboBox
+                                                        selectionChange="handleMentorChange"
+                                                        items="{
+                                                            path: 'mentorsModel>/'
+                                                        }">
+                                                        <core:Item key="{mentorsModel>MENTORID}" text="{mentorsModel>NAME}" />
+                                                    </ComboBox>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </IconTabFilter>
+                                <IconTabFilter id="icontab1" key="assignedFranchise" text="Available Franchise">
+                                    <Table id="idfranchise" inset="false" items="{
+                                    path: 'franchiseModel>/'}">
+                                        <headerToolbar>
+                                            <OverflowToolbar>
+                                                <content>
+                                                    <Title text="Franchises and their mentors" level="H2" />
+                                                    <ToolbarSpacer />
+                                                </content>
+                                            </OverflowToolbar>
+                                        </headerToolbar>
+                                        <columns>
+                                            <Column width="12em">
+                                                <Text text="Franchise ID" />
+                                            </Column>
+                                            <Column minScreenWidth="Tablet" demandPopin="true">
+                                                <Text text="Franchise Name" />
+                                            </Column>
+                                            <Column>
+                                                <Text text="Mentor Name" />
+                                            </Column>
+                                            <Column>
+                                                <Text text="Mentor's Experiance" />
+                                            </Column>
+                                            <Column>
+                                                <Text text="Mentor's Email" />
+                                            </Column>
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem vAlign="Middle">
+                                                <cells>
+                                                    <Text text="{franchiseModel>BUSINESSPARTNERID}" />
+                                                    <ObjectIdentifier title="{franchiseModel>BUSINESSPARTNERNAME}" />
+                                                    <ObjectIdentifier title="{franchiseModel>MENTORNAME}" />
+                                                    <Text text="{franchiseModel>EXPERIENCE}" />
+                                                    <Text text="{franchiseModel>EMAIL}" />
+
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                  
+                                </IconTabFilter>
+
+                            </items>
+                        </IconTabBar>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
