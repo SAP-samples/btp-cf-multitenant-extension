@@ -10,7 +10,7 @@
     7. [Discover the SAP Cloud SDK](./discover-sap-cloud-sdk/../complete/complete-mission/README.md)
     8. [Discover SAPUI5 and SAP Business Application Studio](./discover/ui5-fiori-elements-business-app-studio/README.md)
 * [EXPLORE](./explore/README.md)
-    1. [Understand the Database Service](../../main/db/README.md)
+    1. [Understand the Database Service](../../tree/main/db/README.md)
     2. [Understand the Business Partner Service](../../tree/main/businessPartner/README.md)
     3. [Understand the Admin Service](../../tree/main/admin-srv/README.md)
     4. [Understand the Admin User Interface](../../tree/main/adminui/readme.md)
