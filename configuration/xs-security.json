@@ -1,0 +1,36 @@
+{
+    "xsappname": "easyfranchise",
+    "tenant-mode": "shared",
+    "description": "Security profile of Easy Franchise",
+    "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.Coordinator",
+            "description": "Role to assign mentors to a franchise"
+        },{
+            "name": "$XSAPPNAME.Callback",
+            "description": "With this scope set, the callbacks for tenant onboarding, offboarding and getDependencies can be called.",
+            "grant-as-authority-to-apps": [
+                "$XSAPPNAME(application,sap-provisioning,tenant-onboarding)"
+            ]
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Coordinator",
+            "description": "Role template for Mentor assignment",
+            "scope-references": [
+                "$XSAPPNAME.Coordinator"
+            ]
+        }
+    ],
+    "role-collections": [
+        {
+            "name": "Coordinator",
+            "description": "Collection of roles for Mentor assignment",
+            "role-template-references": [
+                "$XSAPPNAME.Coordinator"
+            ]
+        }
+    ]
+}

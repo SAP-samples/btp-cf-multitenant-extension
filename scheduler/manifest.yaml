@@ -1,0 +1,14 @@
+applications:
+  - name: scheduler
+    host: referenceapps-ga-saas2-dev-scheduler
+    path: .
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    random-route: true
+    services:
+      - ga-shareduaa
+      - easyfranchise-logs
+      - easyfranchise-tenant-hdiconatiner
+    env:
+      businessPartnerAPI: https://referenceapps-ga-saas2-dev-business-partner.cfapps.eu12.hana.ondemand.com

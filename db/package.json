@@ -1,0 +1,9 @@
+{
+    "name": "deploy",
+    "dependencies": {
+        "@sap/hdi-dynamic-deploy": "latest"
+    },
+    "scripts": {
+        "start": "node node_modules/@sap/hdi-dynamic-deploy/"
+    }
+}

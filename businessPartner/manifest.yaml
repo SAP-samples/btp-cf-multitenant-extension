@@ -1,0 +1,14 @@
+applications:
+  - name: business-partner
+    host: referenceapps-ga-saas2-dev-business-partner
+    buildpacks:
+      - nodejs_buildpack
+    memory: 512M
+    command: npm run start
+    random-route: true
+    services:
+      - destination
+      - gaconn
+      - ga-shareduaa
+      - easyfranchise-logs
+      - es-sm

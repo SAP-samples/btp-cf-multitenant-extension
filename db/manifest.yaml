@@ -1,0 +1,7 @@
+---
+applications:
+  - name: easy-franchise-db
+    env:
+      hdi_dynamic_deploy_user: test1
+      hdi_dynamic_deploy_password: test1
+    command: npm start

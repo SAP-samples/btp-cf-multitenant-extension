@@ -1,0 +1,26 @@
+{
+  "welcomeFile": "ui/index.html",
+    "routes": [
+     {
+      "source": "^/businesspartner/(.*)$",
+      "target": "$1",
+      "destination": "businesspartner",
+      "scope": "$XSAPPNAME.Coordinator"
+    },
+    {
+      "source": "^/admin/(.*)$",
+      "target": "$1",
+      "destination": "adminsrv"
+    },
+    {
+      "source": "^/adminui",
+      "target": "/",
+      "destination": "adminui"
+    },
+    {
+      "source": "^/ui",
+      "target": "/",
+      "destination": "ui"
+    }
+  ]
+  }

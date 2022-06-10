@@ -1,0 +1,30 @@
+{
+  "name": "businesspartner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "NODE_ENV=dev XS_APP_LOG_LEVEL=debug nodemon index",
+    "start": "node index"
+  },
+  "author": "gopal anand",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@sap/cloud-sdk-op-vdm-business-partner-service": "^2.0.0",
+    "@sap/hana-client": "^2.11.20",
+    "@sap/instance-manager": "^3.3.1",
+    "@sap/logging": "^6.1.1",
+    "@sap/xsenv": "^3.2.1",
+    "@sap/xssec": "^3.2.13",
+    "express": "^4.17.1",
+    "passport": "^0.5.2",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}

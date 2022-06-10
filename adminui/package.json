@@ -1,0 +1,34 @@
+{
+  "name": "adminui",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
+    "build:ui": "run-s  build:uimodule",
+    "test": "run-s lint karma",
+    "karma-ci": "karma start karma-ci.conf.js",
+    "clearCoverage": "shx rm -rf coverage",
+    "karma": "run-s clearCoverage karma-ci",
+    "lint": "eslint ./**/webapp/**/*.js && prettier --plugin-search-dir=. --check ./**/webapp/**/*.{js,xml}",
+    "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
+    "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
+    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest uimodule/dist --include-task=generateManifestBundle"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3",
+    "@ui5/cli": "^2.14.1",
+    "ui5-middleware-livereload": "^0.5.8",
+    "karma": "^6.3.9",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.1.0",
+    "karma-ui5": "^2.3.4",
+    "npm-run-all": "^4.1.5",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "@prettier/plugin-xml": "^1.1.0"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload"
+    ]
+  }
+}

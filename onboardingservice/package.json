@@ -1,0 +1,38 @@
+{
+  "name": "multitenancyhandler",
+  "version": "1.0.0",
+  "description": "Multitenancy handler application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "XS_APP_LOG_LEVEL=debug node index.js",
+    "dev": "NODE_ENV=dev XS_APP_LOG_LEVEL=debug nodemon index.js"
+  },
+  "keywords": [
+    "saas",
+    "multitenancy"
+  ],
+  "author": "Gopal Anand",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@sap-cloud-sdk/core": "^1.54.0",
+    "@sap/hdbext": "^7.6.3",
+    "@sap/instance-manager": "^3.3.2",
+    "@sap/logging": "^6.1.1",
+    "@sap/xsenv": "^3.2.2",
+    "@sap/xssec": "^3.2.13",
+    "axios": "^0.27.0",
+    "body-parser": "^1.19.0",
+    "cfenv": "^1.0.4",
+    "express": "^4.17.1",
+    "passport": "^0.5.2",
+    "qs": "^6.4.0",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

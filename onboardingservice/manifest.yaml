@@ -1,0 +1,18 @@
+applications:
+  - name: easyfranchise-onboardingservice
+    path: .
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    random-route: false
+    services:
+      - ga-shareduaa
+      - cpapp-logs
+      - es-saas
+      - es-sm
+      - destination
+      - gaconn
+    env:
+      db_api_url: https://easy-franchise-db.cfapps.sap.hana.ondemand.com
+      db_api_user: test1
+      db_api_password: test1

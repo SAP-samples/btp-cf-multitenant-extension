@@ -1,0 +1,7 @@
+COLUMN TABLE "EF.mentor" ( 
+    MENTORID VARCHAR(40),
+    NAME VARCHAR(20),
+    EMAIL VARCHAR(20),
+    PHONE Integer,
+    EXPERIENCE Integer,
+    PRIMARY KEY ("MENTORID"));

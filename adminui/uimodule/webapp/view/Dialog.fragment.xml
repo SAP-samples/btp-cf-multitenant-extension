@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+    <Dialog
+    id="mentorDialog"
+    title="Create new mentor">
+    <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Name" />
+				<Input id="mentorName" 	placeholder="Enter name"
+                valueStateText="Name must not be empty. Maximum 20 characters."
+                />
+				<Label text="Email" />
+				<Input id="mentorEmail" 			placeholder="Enter email"
+                valueStateText="E-mail must be a valid email address.">
+				</Input>
+				<Label text="Phone" />
+				<Input id="mentorPhone" type="Number">
+				</Input>
+				<Label text="experience" />
+                <Input id="mentorExperiance" type="Number"></Input>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+    <beginButton>
+        <Button
+            text="Create" type="Emphasized"
+            press=".onCloseDialog"/>
+    </beginButton>
+</Dialog>
+</core:FragmentDefinition>

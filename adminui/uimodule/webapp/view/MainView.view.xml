@@ -1,0 +1,104 @@
+<mvc:View controllerName="com.sap.adminui.controller.MainView" xmlns:mvc="sap.ui.core.mvc" 
+xmlns:tnt="sap.tnt" displayBlock="true" xmlns="sap.m" xmlns:u="sap.ui.unified">
+    <tnt:ToolHeader id="_IDGenToolHeader1">
+        <Image id="_IDGenImage1" height="2rem" width="4rem" />
+        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+        <Text id="_IDGenText1" text="{i18n>title}" wrapping="false" />
+        <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+
+    </tnt:ToolHeader>
+
+            <Panel id="_IDGenPanel1" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <Title id="_IDGenTitle1" text="General Settings" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                   <Label id="_IDGenLabel2" text="Upload your Company's logo" required="true"></Label>
+                   <HBox id="_IDGenHBox1" alignItems="Center">
+                    <u:FileUploader
+                    id="fileUploader"
+                    name="att"
+                    uploadUrl="/admin/api/v1/image"
+                    multiple="false"
+                    sendXHR="true"
+                    useMultipart="true"
+                    tooltip="Upload your logo to server"
+                    uploadComplete="handleUploadComplete"/>
+                <Button id="_IDGenButton1"
+                    text="Upload Logo"
+                    press="handleUploadPress"/>
+                    <VBox id="_IDGenVBox1">
+                        <Image id="_IDGenImage2" height="5rem" width="5rem"/>
+                    </VBox>
+                    
+                   </HBox>
+                   <VBox id="_IDGenVBox2"  class="sapUiLargeMarginTop">
+                    <Label id="_IDGenLabel1" text="Title of your Company" labelFor="inputTextTitle" />
+                    <HBox id="_IDGenHBox2">
+                        <Input
+                        id="inputTextTitle"
+                        placeholder="Enter Title"
+                        class="sapUiSmallMarginBottom" />
+                        <Button id="_IDGenButton2" class="sapUiTinyMarginBegin"  press="storeTitle" type="Emphasized" text="Save"></Button>
+                        </HBox>
+         
+                   </VBox>
+                 
+                </content>
+            </Panel>
+            <Panel id="_IDGenPanel2" headerText="Manage Mentors" class="sapUiResponsiveMargin" width="98%"> 
+
+                <Table id="idMentorsTable"
+                inset="false"
+                items="{mentorModel>/}">
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar2">
+                        <content>
+                            <Title id="_IDGenTitle2" text="Mentors" level="H2"/>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                            <Button id="_IDGenButton3" press="createMentors" tooltip="Create Mentor" icon="sap-icon://add-employee"></Button>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="_IDGenColumn1"
+                        width="12em">
+                        <Text id="_IDGenText2" text="Name" />
+                    </Column>
+                    <Column id="_IDGenColumn2"
+                        minScreenWidth="Tablet"
+                        demandPopin="true">
+                        <Text id="_IDGenText3" text="Email" />
+                    </Column>
+                    <Column id="_IDGenColumn3"
+                        minScreenWidth="Desktop"
+                        demandPopin="true"
+                        hAlign="End">
+                        <Text id="_IDGenText4" text="Phone" />
+                    </Column>
+                    <Column id="_IDGenColumn4"
+                        minScreenWidth="Desktop"
+                        demandPopin="true"
+                        hAlign="Center">
+                        <Text id="_IDGenText5" text="experience" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle">
+                        <cells>
+                            <ObjectIdentifier
+                                title="{mentorModel>NAME}"/>
+                            <Text 
+                                text="{mentorModel>EMAIL}" />
+                            <Text 
+                                text="{mentorModel>PHONE}" />
+                            <ObjectNumber 
+                                number="{mentorModel>EXPERIENCE}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            </Panel>
+</mvc:View>

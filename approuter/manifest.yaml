@@ -1,0 +1,24 @@
+applications:
+  - name: easyfranchise
+    path: .
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    env:
+      TENANT_HOST_PATTERN: >-
+        ^(.*)-easyfranchise.cfapps.sap.hana.ondemand.com
+      destinations: >-
+        [
+          { 
+           "name": "businesspartner",
+          "url": "https://businesspartner-service-grateful-eland-jk.cfapps.sap.hana.ondemand.com", 
+          "forwardAuthToken": true
+          },
+          {
+          "name": "ui",
+          "url": "https://easyfranchise-ui.cfapps.sap.hana.ondemand.com"
+          }
+        ]
+    services:
+      - ga-shareduaa
+      - cpapp-logs

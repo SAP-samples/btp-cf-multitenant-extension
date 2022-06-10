@@ -1,0 +1,240 @@
+---
+_schema-version: '3.1'
+ID: easyfranchise
+version: 1.0.0
+description: "Easy Franchise App"
+parameters:
+  enable-parallel-deployments: true
+modules:
+  # DB module    
+  - name: db
+    type: com.sap.xs.hdi-dynamic
+    path: db
+    parameters:
+      memory: 256M
+    properties:
+      hdi_dynamic_deploy_user: ${generated-user}
+      hdi_dynamic_deploy_password: ${generated-password}
+    provides:
+    - name: db_deployment
+      properties:
+         url: ${default-url}
+         user: ${generated-user}
+         password: ${generated-password}
+ 
+#####################
+## ADMIN DB module ##
+#####################
+  - name: admin-db
+    type: hdb
+    path: admin-db
+    parameters:
+      memory: 256M
+      disk-quota: 512M
+    requires:
+      # Hana Container
+      - name: easyfranchise-tenant-hdiconatiner
+
+ # UI module     
+  - name: ui
+    type: nodejs
+    path: ui/uimodule/webapp
+    parameters:
+      buildpack: staticfile_buildpack
+      memory: 256M
+    provides:
+      - name: uiurl # required by approuter
+        properties:
+          uiurl: ${default-url}
+
+ # Admin UI Module     
+  - name: adminui
+    type: nodejs
+    path: adminui/uimodule/webapp
+    parameters:
+      buildpack: staticfile_buildpack
+      memory: 256M
+    provides:
+      - name: adminuiurl # required by approuter
+        properties:
+          adminuiurl: ${default-url}
+# Business Partner service
+  - name: business-partner
+    type: nodejs
+    path: businessPartner
+    parameters:
+      buildpack: nodejs_buildpack
+      memory: 256M
+    provides:
+      - name: srv-api # required by approuter
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: es-sm 
+      - name: ga-shareduaa
+      - name: easyfranchise-logs
+      - name: destination
+      - name: gaconn
+      
+# Admin Service
+  - name: admin-srv
+    type: nodejs
+    path: admin-srv
+    parameters:
+      buildpack: nodejs_buildpack
+      memory: 256M
+    provides:
+      - name: admin-srv-api # required by approuter
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: es-sm
+      - name: ga-shareduaa
+      - name: easyfranchise-logs
+
+ # scheduler
+  - name: scheduler
+    type: nodejs
+    path: scheduler
+    parameters:
+      memory: 256M
+    requires:
+      - name: srv-api
+      - name: easyfranchise-logs
+      - name: ga-shareduaa
+      - name: easyfranchise-tenant-hdiconatiner
+    properties:
+      businessPartnerAPI: ~{srv-api/srv-url} 
+
+## Onboarding Service ####################
+## Responsible for teanant provisioning ##
+##########################################
+  - name: onboarding-service
+    type: nodejs
+    path: onboardingservice
+    parameters:
+      buildpack: nodejs_buildpack
+      memory: 256M
+    provides:
+      - name: onboarding-api # required by approuter
+        properties:
+          onboarding-url: ${default-url}
+    requires:
+      - name: es-sm
+      - name: ga-shareduaa
+      - name: gaconn
+      - name: destination
+      - name: easyfranchise-logs
+      - name: es-saas
+      - name: db_deployment
+      - name: easyfranchise-tenant-hdiconatiner
+    properties:
+      SAP_JWT_TRUST_ACL:
+        - clientid: "*"
+          identityzone: "sap-provisioning"
+      db_api_url: ~{db_deployment/url}
+      db_api_password: ~{db_deployment/password}
+      db_api_user: ~{db_deployment/user}
+
+ # Approuter     
+  - name: approuter
+    type: approuter.nodejs
+    path: approuter/ 
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    provides:
+      - name: app_api
+        properties:
+          url: ${default-url}
+          application: ${app-name}
+    properties:
+      TENANT_HOST_PATTERN: '^(.*)-${space}-${app-name}.${default-domain}'
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: businesspartner # this is a name which must be used in xs-app.json as well
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: admin-srv-api
+        group: destinations
+        properties:
+          name: adminsrv
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: adminuiurl
+        group: destinations
+        properties:
+          name: adminui
+          url: ~{adminuiurl}
+      - name: uiurl
+        group: destinations
+        properties:
+          name: ui
+          url: ~{uiurl}
+      - name: ga-shareduaa
+      - name: easyfranchise-logs
+
+resources:
+## XSUAA
+  - name: ga-shareduaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: configuration/xs-security.json
+      service: xsuaa
+      service-plan: application
+## Service Manager to manage HDI Container
+  - name: es-sm
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: service-manager
+      service-plan: container
+## SaaS registry Service
+  - name: es-saas
+    type: org.cloudfoundry.managed-service
+    requires:
+      - name: onboarding-api
+    parameters:
+      service: saas-registry
+      service-plan: application
+      config:
+        xsappname: easyfranchise
+        appName: easyfranchise
+        displayName: Easy Franchise
+        description: Multitenant Rental applicaition
+        category: 'Refapps'
+        appUrls:
+          getDependencies: ~{onboarding-api/onboarding-url}/callback/v1.0/dependencies
+          onSubscription: ~{onboarding-api/onboarding-url}/callback/v1.0/tenants/{tenantId}
+          onSubscriptionAsync: false
+          onUnSubscriptionAsync: false
+          callbackTimeoutMillis: 300000
+ ## Logging Service
+  - name: easyfranchise-logs
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: application-logs
+      service-plan: lite
+ ## Reuse- Destination Service
+  - name: destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+ ## Reuse- Connectivity Service
+  - name: gaconn
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: connectivity
+      service-plan: lite
+
+# Tenant DB
+  - name: easyfranchise-tenant-hdiconatiner
+    type: com.sap.xs.hdi-container
+    parameters:
+     service: hana
+     service-plan: hdi-shared
+    properties:
+      hdi-container-name: '${service-name}'

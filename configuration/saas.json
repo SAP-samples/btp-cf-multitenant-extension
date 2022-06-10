@@ -1,0 +1,10 @@
+{
+	"xsappname": "easyfranchise",
+	"displayName": "Easy Franchise",
+	"description": "Easy Franchise app to onboard and assign mentors to franchisees",
+	"category": "Refapps",
+	"appUrls": {
+		"getDependencies" : "https://easyfranchise-onboardingservice.cfapps.sap.hana.ondemand.com/callback/v1.0/dependencies", 
+		"onSubscription": "https://easyfranchise-onboardingservice.cfapps.sap.hana.ondemand.com/callback/v1.0/tenants/{tenantId}"
+	}
+}
