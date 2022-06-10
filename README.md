@@ -1,41 +1,54 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
+# Project Board
 
-# Containing Files
+* [DISCOVER](./discover/README.md)
+    1. [Learn how to use missions and project boards in SAP Discovery Center](./discover/how-to-use-missions/README.md)
+    2. [Learn about the goal and outcome of the mission](./discover/goal-and-outcome-of-mission/README.md)
+    3. [Learn the Business Scenario of the mission](./discover/business-scenario/README.md)
+    4. [Understand the Multitenancy](./discover/multitenancy/README.md)
+    5. [Learn the basics of SAP BTP](./discover/sap-btp-basics/README.md)
+    6. [Learn about Node.js](./discover/nodejs/README.md)
+    7. [Discover the SAP Cloud SDK](./discover-sap-cloud-sdk/../complete/complete-mission/README.md)
+    8. [Discover SAPUI5 and SAP Business Application Studio](./discover/ui5-fiori-elements-business-app-studio/README.md)
+* [EXPLORE](./explore/README.md)
+    1. [Understand the Database Service](../../main/db/README.md)
+    2. [Understand the Business Partner Service](../../main/businessPartner/README.md)
+    3. [Understand the Admin Service](../../main/admin-srv/README.md)
+    4. [Understand the Admin User Interface](../../main/adminui/readme.md)
+    5. [Understand the Approuter](../../main/approuter/README.md)
+    6. [Understand the Onboarding Service](../../main/onboardingservice/README.md)
+    7. [Understand the Scheduler](../../main/scheduler/README.md)
 
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
 
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
+* [PREPARE](./prepare/README.md)
+    1. [Explore APIs & events in SAP API Business Hub](./prepare/explore-apis-and-events/README.md)
+    2. [Make sure prerequisites are fulfilled and all required systems are in place](./prepare/mission-prerequisites/README.md)
+    3. [Create a Test SAP S/4HANA System Using SAP Cloud Appliance Library (optional)](https://github.com/SAP-samples/cloud-extension-ecc-business-process/blob/mission/mission/cal-setup/CALS4H.md)
+    
 
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
+* [SET UP](https://github.tools.sap/e2e-scenario-enablement/mission-structure-template/tree/main/documentation/set-up)
+    1. [Configure your global account and subaccounts in SAP BTP](./set-up/configure-account/README.md)
+    2. [Create a SAP HANA Cloud Instance](./set-up/hana/README.md)
 
-# [Title]
-<!-- Please include descriptive title -->
-
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
-
-## Description
-<!-- Please include SEO-friendly description -->
-
-## Requirements
-
-## Download and Installation
-
-## Known Issues
-<!-- You may simply state "No known issues. -->
-
-## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+* [BUILD](./build/README.md)
+   1. [Build and deploy the EasyFranchise Application](./build/bas/README.md)
+   
+    
+* [SUBSCRIBE](./subscribe/README.md)
+   1. [Create a Customer Subaccount](/documentation/subscribe/create-subscriber-subaccount/README.md)
+   2. Configure Connection to customer SAP S/4HANA System
+      1. [Set up SAP S/4HANA on-premise System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
+      2. [Set up End-to-End Connectivity SAP BTP to SAP S/4HANA on-premise](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
+   3. [Subscribe the Easy Franchise Application](./subscribe/subscription/README.md)
+   4. [Create Route](./subscribe/route-creation/README.md)
+   5. Assign Roles
+      1. [Assign Roles](./subscribe/assign-roles/README.md)
+      2. [Set up SAP Identity and Authentication Service](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/custom-idp/README.md)
+   6. [Run the Application](./subscribe/run-application/README.md)
+   7. [Test the Multitenancy](./subscribe/run-application/README.md#running-the-application)
+   8. Video
+   9. Troubleshooting
  
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
-
-## Contributing
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
-
-## License
-Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+ * [COMPLETE](./complete/README.md)
+    1. [Tell us what do you think](./complete/give-feedback/README.md)
+    2. [Next Steps](./complete/next-steps/README.md)
+    3. [Complete the mission](./complete/complete-mission/README.md)
