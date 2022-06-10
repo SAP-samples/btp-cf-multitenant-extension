@@ -25,7 +25,7 @@
     3. [Create a Test SAP S/4HANA System Using SAP Cloud Appliance Library (optional)](https://github.com/SAP-samples/cloud-extension-ecc-business-process/blob/mission/mission/cal-setup/CALS4H.md)
     
 
-* [SET UP](https://github.tools.sap/e2e-scenario-enablement/mission-structure-template/tree/main/documentation/set-up)
+* [SET UP](./set-up)
     1. [Configure your global account and subaccounts in SAP BTP](./set-up/configure-account/README.md)
     2. [Create a SAP HANA Cloud Instance](./set-up/hana/README.md)
 
@@ -34,7 +34,7 @@
    
     
 * [SUBSCRIBE](./subscribe/README.md)
-   1. [Create a Customer Subaccount](/documentation/subscribe/create-subscriber-subaccount/README.md)
+   1. [Create a Customer Subaccount](./subscribe/create-subscriber-subaccount/README.md)
    2. Configure Connection to customer SAP S/4HANA System
       1. [Set up SAP S/4HANA on-premise System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
       2. [Set up End-to-End Connectivity SAP BTP to SAP S/4HANA on-premise](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
