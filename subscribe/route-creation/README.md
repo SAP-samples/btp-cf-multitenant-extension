@@ -2,7 +2,7 @@
 Once you create the application and try to launch it, you get an error like this.
 ![404 route](./route.png)
 
-This error occurs because there is no application with this route deployed yet. Now you need to create a route for this subaccount and target it to the approuter. The approuter later will route the traffic to the application using the tenant host pattern. More details can be found in the [approuter documentation](../../tree/main/approuter/README.md).  
+This error occurs because there is no application with this route deployed yet. Now you need to create a route for this subaccount and target it to the approuter. The approuter later will route the traffic to the application using the tenant host pattern. More details can be found in the [approuter documentation](../../../tree/main/approuter/README.md).  
 Rotue creation can be done automatically or with Cloud Foundry APIs during onboarding, or via CLI/ manually. Let's check how to do it manually. 
 # Route Creation Option 1 using BTP Cockpit
 
