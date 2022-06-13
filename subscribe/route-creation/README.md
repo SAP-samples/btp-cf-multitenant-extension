@@ -30,7 +30,7 @@ The Route Creation can be done using the Cloud Foundry CLI. Here's a quick guide
    `cf map-route approuter cfapps.eu12.hana.ondemand.com --hostname subscriber-subaccount-dev-approuter`.
 
    Here the approuter is the name of the approuter app. The `cfapps.eu12.hana.ondemand.com` is the domain of the approuter app. The `--hostname` is the hostname obtained after subscribing to the approuter.
-   Please refer to the above picture for more details.
+   Please refer to the below picture for more details.
    ![Route](./route.png)
 
    The output of the command is:
@@ -42,4 +42,3 @@ Now you can run the application.
 # Route Creation Option 3: Using Cloud Foundry APIs during (Onboarding)
 Another option to create the routes are to use the Cloud Foundry APIs during onboarding. Different api calls can be used to create the route and map it to the approuter. 
 Here's the [API Reference](https://v3-apidocs.cloudfoundry.org/version/3.117.0/index.html#the-service-route-binding-object).
- 
