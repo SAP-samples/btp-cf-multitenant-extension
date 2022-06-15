@@ -1,33 +1,30 @@
-# Business scenario 
+# Business Scenario 
 ![Persona Overview](./images/EasyFranchise%20persona.png)
 
 
-### SAP PARTNER ​
+### SAP Partner ​
 
-EasyFranchise is a Partner providing a multitenant SaaS extension for S/4HANA named EasyFranchise App, that allows to onboard new business partners more easily. ​
+The company Easy Franchise is an SAP Partner providing a multitenant SaaS extension application for SAP S/4HANA called Easy Franchise, that allows you to onboard new business partners easily. ​
 
-- The extension application allows:​
+- The extension application helps with:​
 
-    - To assign a mentor for each new business partner, that is added in the SAP S/4HANA system​
+    - Assigning a mentor for each new business partner, that is added in the SAP S/4HANA system.​
 
-    - To search for suitable trainings based on the business partner profile/skill, using data from SFSF and machine learning (out of scope for June)​
+    - Searching for suitable trainings based on the business partner profile/skill, using data from SAP SuccessFactors and machine learning (out of scope for June).​
 
-    - To sent a notification to the respective mentor about his assignment, so that he can prepare next onboarding steps​
+    - Sending a notification to the respective mentor about their assignment, so that they can prepare the next onboarding steps.​
 
-    - To collect standard information / guidelines in one central place that will be shared with the new franchise company​
+    - Collecting standard information/guidelines in one central place that will be shared with the new franchise company.​
 
-### SAP CUSTOMERS​
+### SAP Customers​
 
-- CityScooter, BikeSharing and CarRenting are 3 different companies renting electric vehicles to franchise companies. ​
+City Scooter, Bike Sharing and Car Renting are three different companies renting electric vehicles to franchise companies. ​
+In order to speed up the onboarding of new franchises, each of them purchased the EasyFranchise application. ​
+Each one of these companies has their own SAP S/4HANA system which would be connected to the Easy Franchise application.
 
-- In order to speed up the onboarding of new franchises, each of them purchased the partner EasyFranchise application. ​
-- Each customer has their own SAP S/4HANA system which would be connected to the EasyFranchise application.
+### Franchise Companies​
 
-### FRANCHISE COMPANIES​
-
-- Franchise companies are respective business partners that are taking over the B2C​
-
-- They are responsible for managing the vehicles parc in a defined region (e.g one or more cities)​
+Franchise companies are business partners that are take over the B2C. They are responsible for managing the vehicles parc in a defined region (for example, in the same city or in several cities).
 
 - Not really relevant in our scenario​
 
