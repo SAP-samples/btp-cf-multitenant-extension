@@ -1,4 +1,4 @@
-# Database Microservice
+# Database Service
 The database microservice is responsible for creating database tables for each of the newly onboarded subscribers.
 This project uses the package [`@sap/hdi-dynamic-deploy`](https://www.npmjs.com/package/@sap/hdi-dynamic-deploy) to deploy the database articats to the HDI container. 
 
