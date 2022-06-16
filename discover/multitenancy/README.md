@@ -1,6 +1,7 @@
-## Develop the Multitenant Application
+## Develop a Multitenant Application
 
-In the Cloud Foundry environment of SAP BTP, you can develop and run multitenant applications that can be accessed by multiple consumers (tenants) through a dedicated URL.
+In SAP BTP, Cloud Foundry environment, you can develop and run multitenant applications that can be accessed by multiple consumers (tenants) through a dedicated URL. See [Developing Multitenant Applications in the Cloud Foundry Environment](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/5e8a2b74e4f2442b8257c850ed912f48.html?version=Cloud) in SAP Help Portal.
+
 ## Context
 When developing tenant-aware applications in the Cloud Foundry environment, keep in mind the following general programming guidelines:
 
@@ -16,18 +17,25 @@ When developing tenant-aware applications in the Cloud Foundry environment, keep
 
 ## SAP BTP Multitenancy Model
 
-In this tutorial we will be using some keywords like provider account, sunscriber account, provisioning, onboarding and data isolation. 
-Let's start with the **Provider** account.
-A provider is the vendor of the application. Persona who is going to build, deliver and operate the multitenant saas solution for all the subscribers.
+In this tutorial we will be using some keywords like provider account, subscriber subaccount, provisioning, onboarding and data isolation. 
 
-**Subscriber** is the consumer of the application. Persona who is going to use the multitenant SaaS solution.
+**Provider account** 
+The provider is the vendor of the application. This is the company that is going to build, deliver and operate the multitenant SaaS solution for all the subscribers. The vendor has a **provider account**, a global account in SAP BTP.
 
-**Provisioning** is the process of onboarding new subscriber to the multitenant SaaS solution. During provisioning proccess, tenant database schema is created, any dependency is injected into the subscriber subaccount.
+**Subscriber subaccount** 
+Subscriber is the consumer of the application. This is another company that is going to use the multitenant SaaS solution. This company buys the SaaS solution and subscribes to it. The subscriber has a **subscriber subaccount**, a subaccount of the vendor's global account in SAP BTP.
 
-## BTP multitenancy model - Provider's point of view 
+**Onboarding**
+This is the process of creating a subaccount for the subscriber in the vendor's global account in SAP BTP.
+
+**Provisioning** 
+This is the process of onboarding new subscriber to the multitenant SaaS solution. During the provisioning proccess, tenant database schema is created, any dependency is injected into the subscriber subaccount.
+
+## SAP BTP Multitenancy Model - Provider's Point of View 
 ![Account Model](./images/accountmodel.png)
 
-## Database Schema Segregation Recommendation
-There are multiple ways to achieve database schema segregation. The recommendation is to have dedicated database schema for each tenant. In this tutorial we will be using 'hdi-container' based model for database schema segregation. This provices unqiue database schema and credentials for each of the tenant ensuring additional security and data isolation.
+## Recommendation for the Database Schema Segregation
+
+There are multiple ways to achieve database schema segregation. We recommend that you have a dedicated database schema for each tenant. In this tutorial, we will be using 'hdi-container'-based model for database schema segregation. This provides unqiue database schema and credentials for each of the tenant ensuring additional security and data isolation.
 
 ![Database schema recommendation](./images/tenantdataseperation.jpeg)
