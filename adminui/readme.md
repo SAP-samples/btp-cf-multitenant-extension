@@ -1,18 +1,16 @@
-# Admin UI
+# Understand the Admin User Interface
 
-This UI is used by the admin to set the Company name for which this applicaiton is subscribed to , set Company Specific logo and Create Mentor Master data.
+The Admin User Interface is used by the administrator to set the company name, logo and mentor master data of the company that is subscribed to the applicaiton.
 
-## Accessign The Admin UI 
-You can access the application from Subscriber subaccount then append `\adminui\` to the end of the URL to access the admin UI.
-Here's the UI preview.
+You can access the application from the subscriber subaccount, and then append `\adminui\` to the end of the URL to access the Admin User Interface.
+Here's a preview of the Admin User Interface and how you can use it:
+
 ![Image](../documentation/images/AdminUI.png)
 
-## How to use the Admin UI
-In the above screenshot you can see numbers. Here's each number and the action corresponding to it: 
-1. Choose the logo from your local system
-2. Upload the logo to database
-3. Set the Company name as title
-4. To create new mentor master data, click on the `+` button
+1. Choose the logo from your local file system.
+2. Upload the logo to the database.
+3. Set the company name.
+4. To create new mentor master data, choose `+`.
 
 ## Credits
 
