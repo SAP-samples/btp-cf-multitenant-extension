@@ -1,18 +1,18 @@
-# Database Microservice
+# Understand the Database Microservice
 The database microservice is responsible for creating database tables for each of the newly onboarded subscribers.
-This project uses the package [`@sap/hdi-dynamic-deploy`](https://www.npmjs.com/package/@sap/hdi-dynamic-deploy) to deploy the database articats to the HDI container. 
+This project uses the [`@sap/hdi-dynamic-deploy`](https://www.npmjs.com/package/@sap/hdi-dynamic-deploy) package to deploy the database artifacts to the HDI container. 
 
-## How it works
-The datbase module is deployed as a microservice. It seems HDI container credentials as a payload and based on the credentials it establishes a connection to the database, deploys the database artifacts and creates the tables. 
+## How Does It Work?
+The database module is deployed as a microservice. It uses HDI container credentials as a payload and based on the credentials, it establishes a connection to the database, deploys the database artifacts and creates the tables. 
 
-## Database tables used
+## Database Tables That Are Used
 This database module creates the following tables:
 - Mentor
 - Franchise
 - Comfiguration
 
 ### Mentor
-The mentor table is used to store the details of the mentors.
+The Mentor table is used to store the details of the mentors.
 The following fields are part of this table:
 - MENTORID
 - NAME
@@ -22,7 +22,7 @@ The following fields are part of this table:
 - PRIMARY KEY
 
 ### Franchise
-The franchise table is used to store the details of the franchises.
+The Franchise table is used to store the details of the franchises.
 The following fields are part of this table:
 - BUSINESSPARTNERID
 - BUSINESSPARTNERNAME
@@ -31,8 +31,8 @@ The following fields are part of this table:
 - MENTORID
 
 ### Configuration
-The configuration table is used to store customization details of the application. This gives unique identifier to each of the subscribing tenants. 
-The fields are:
+The configuration table is used to store customization details of the application. This gives a unique identifier to each of the subscribing tenants. 
+The following fields are part of this table:
 - ID
 - TITLE
 - FILE_NAME
