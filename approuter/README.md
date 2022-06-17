@@ -1,4 +1,4 @@
-# Approuter Module
+# Understand the Approuter
 
 When a business application consists of several different apps (microservices), the application router is used to provide a single entry point to that business application. It has the responsibility to:
 
