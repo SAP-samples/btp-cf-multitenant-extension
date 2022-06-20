@@ -1,18 +1,15 @@
-# Tenant Provisioning 
-Once the multitenant application is deployed, the tenant provisioning process is initiated.
+# Create a Customer Subaccount 
+Once the multitenant application is deployed, it's time to create a subaccount in SAP BTP for the customer of this applicaiton. For each customer, you need a different subaccount that is part of the global account in SAP BTP that belongs to the SAP partner providing the multitenant application.
 
-Tenant provisioning is a process that allows the tenant to be created and configured. Here each tenant refers to individual subscribers/customers.
+These subaccounts are created and configured by an administrator in SAP BTP. They must be created in the same region where the application is deployed. For example,  if the multitenant application is deployed in the **us-east-1** region, the subaccounts must be created in the **us-east-1** region as well. The multitenant application is visible only in the region where it's deployed.
 
-## Create Subaccount 
-The tenant provisioning process is initiated by the administrator. The **subscriber subaccount** is created inside the global account with the **same region where the application is deployed**. A multitenant deployed in a region for example **us-east-1** will create a subaccount in the **us-east-1** region. In any other region the multienant application will not be visible.
+Follow these steps to create a subaccount:
 
-## Creating the subaccount.
-The subaccount creation requires a global account to be pre-created with multitenant applicaiton already deployed. 
-Once you are in the global account. Follow the below steps.
-1. Click on `Create`. It's visible at the Account Explorer at subaccount level.
-2. Now a popup will come. Enter the name of the subaccount.
-3. Select the Region. Please Ensure the region is same as the region where the multitenant application is deployed.
-4. Click on `Create`.
+1. Navigate to the global account, choose **Account Explorer**, and then choose **Create** > **Subaccount**.
+2. In the **Create Subaccount** wizard:
+    * Enter a name for the subaccount.
+    * Select a region from the dropdown menu. Make sure the region is the same region where the multitenant application is deployed.
+6. Choose **Create**.
 
 ![Subaccount Creation](./images/createsubaccount.png)
 
