@@ -16,7 +16,8 @@ cron.schedule('*/2 * * * *', () => {
   });
 ```
 ## Fetching New Business Partners
-To fetch Business Partners, for each of the subscribers from their respective SAP S/4HANA system. We are using the `admin` table which has a tenant-specific information like tenant ID, and subdomain. We need the subdomain in order to generate tenant-specific OAuth token. As we have declared `destination` and `connectivity service` we are able to use the same service keys in combination with the tenant-specific subdomain to generate the OAuth token.
+To fetch Business Partners from each of the subscriber subaccount connected to SAP S/4HANA systems. We are using the `admin` table which has a tenant-specific information like tenant ID, and subdomain. We need the subdomain in order to generate tenant-specific OAuth token. 
+As we have declared `destination` and `connectivity service` as dependency to the multitenant applicaton, this allows the same service keys in combination with the tenant-specific subdomain to generate the OAuth token for each subscriber subaccount.
 
 First, we fetch the list of subscribers from the `admin` table. Then, we loop through each of them to generate their OAuth tokens and then fetch the list of Business Partners from their respective SAP S/4HANA system.
 [Here's code sample for fetching the oAuth Token. ](./util/jwt.js#L11)
