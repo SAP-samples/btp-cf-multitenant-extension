@@ -1,22 +1,21 @@
-# Build and Deploy the Easy Franchise Application.
+# Build and Deploy the Easy Franchise Application
 
-For building and deploying the application we use the Multi-target Application Model (mta). You can either use your local environment or SAP Business Application Studio. 
+For building and deploying the application, we use the Multitarget Application (MTA). You can either use your local environment or SAP Business Application Studio. 
 
-
-### Clone the resources
+## Clone the Resources
 
 You get the Easy Franchise sample application from our git repository:
 
-Open a terminal or your command line interface and clone the solution:
+Open a terminal or your command line interface and clone the application:
 
 ```cmd
 git clone https://github.com/SAP-samples/btp-cf-multitenant-extension.git
 ``` 
 
-### Configuration
-As we want roll-out Easy Franchise as a SaaS solution we have to make the name of the solution unique for your account.   
+## Configure the Application
+As we want to roll out the Easy Franchise application as a SaaS solution, we have to make the name of the solution unique for your account.   
 
-Open the **mta.yaml** file. In the **SaaS registry Service** section change the **xsappname** and **appName** parameters to your preferred name. 
+1. Open the **mta.yaml** file. In the **SaaS registry Service** section, change the **xsappname** and **appName** parameters to your preferred name. 
 
 ```yaml
 ## SaaS registry Service
@@ -36,7 +35,7 @@ Open the **mta.yaml** file. In the **SaaS registry Service** section change the 
         appUrls:
 
 ```
-Open the **./configuration/xs-security.json** file. Again change the **xsappname** to the same value as in the mta.yaml.
+2. Open the **./configuration/xs-security.json** file. Again, change the **xsappname** to the same value as in the mta.yaml.
 
 ```json
 
@@ -47,22 +46,21 @@ Open the **./configuration/xs-security.json** file. Again change the **xsappname
     "scopes": [
 
 ```
-Save your changes!
+3. Save your changes.
 
 
-### Build the application
+## Build the Application
 
-Build your application by using the mta.yaml build file. With the -t parameter the file will be created in the specified folder.
+Build your application by using the mta.yaml build file. With the -t parameter, the file will be created in the specified folder.
 
 ```cmd
 mbt build -t ./mta_archives
 
 ```
 
+### Log In to Your Subaccount in SAP BTP
 
-### Logon to your SAP BTP subaccount
-
-1. Set the SAP BTP API endpoint - you find it in overview of your SAP BTP subaccount
+1. Set the SAP BTP API endpoint. You find it in the overview of your subaccount in SAP BTP.
 
     ![api](./images/logon.png)
 
@@ -70,7 +68,7 @@ mbt build -t ./mta_archives
     cf api <your-api endpoint>
     ```
 
-2. Login to your subaccount and space
+2. Log in to your subaccount and space:
 
    ```cmd
    cf login -u <your-user> -p <your-password>
@@ -79,15 +77,15 @@ mbt build -t ./mta_archives
     ```
 
 
-### Deploy the mta archive
+### Deploy the MTA Archive
 
-Now you can deploy the application to your subacccount and space by using the created mtar file:
+Now, you can deploy the application in your subacccount and space by using the MTAR file you just created:
 
 ```cmd
 cd mta_archives
 cf deploy easyfranchise_1.0.0.mtar
 ```
-If the deployment was successful you can check in the Applications section of your space if all the modules are running (exception: admin-db is only used during deployment and is then stopped).
+If the deployment is successful, you can check in the **Applications** section of your space if all the modules are running (exception: admin-db is only in `Running` state during deployment and is then it goes to `Stopped` state once the database artifacts are deployed successfully).
 
 ![apps](./images/apps.png)
 
