@@ -31,7 +31,9 @@ This is the process of creating a subaccount for the subscriber in the vendor's 
 **Provisioning** 
 This is the process of onboarding new subscriber to the multitenant SaaS solution. During the provisioning proccess, tenant database schema is created, any dependency is injected into the subscriber subaccount.
 
-## SAP BTP Multitenancy Model - Provider's Point of View 
+**Provider's Point of View** 
+Putting this together the general account model of a SAP BTP SaaS solution would have the following structure:
+
 ![Account Model](./images/accountmodel.png)
 
 ## Recommendation for the Database Schema Segregation
