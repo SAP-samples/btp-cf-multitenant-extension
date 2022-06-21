@@ -11,8 +11,3 @@ This opens a Swagger definations of the endpoints and the parameters needed to c
 To run the application locally, use the command:
 
 `npm run start:dev`
-
-## Application Structure
-
-
-
