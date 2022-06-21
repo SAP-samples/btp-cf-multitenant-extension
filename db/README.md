@@ -1,6 +1,6 @@
 # Understand the Database Microservice
 The database microservice is responsible for creating database tables for each of the newly onboarded subscribers.
-This project uses the [`@sap/hdi-dynamic-deploy`](https://www.npmjs.com/package/@sap/hdi-dynamic-deploy) package to deploy the database artifacts to the HDI container. 
+This project uses the [`@sap/hdi-dynamic-deploy`](https://www.npmjs.com/package/@sap/hdi-dynamic-deploy) package to deploy the database artifacts to the SAP HANA Deployment Infrastructure (HDI) container . 
 
 ## How Does It Work?
 The database module is deployed as a microservice. It uses HDI container credentials as a payload and based on the credentials, it establishes a connection to the database, deploys the database artifacts and creates the tables. 
