@@ -1,4 +1,4 @@
-# Approuter Module
+# Understand the Approuter
 
 When a business application consists of several different applications (microservices), the application router is used to provide a single entry point to that business application. It has the responsibility to:
 
@@ -13,4 +13,6 @@ See [SaaS Application Registration in Cloud Foundry](https://www.npmjs.com/packa
 
 To run the approuter locally, we need to create a file named `default-env.json` in the root of the project. The file should have `VCAP_Services` with service keys under it. This can be obtained by deploying the approuter application along with its dependent services in the Cloud Foundry environment.
 
-Use the [`xs-app.json`](https://www.npmjs.com/package/@sap/approuter#xs-appjson-configuration-file) file to configure different routes for the application.
+## Configurations
+[`xs-app.json`](https://www.npmjs.com/package/@sap/approuter#xs-appjson-configuration-file) is used to configure different routes for the application.
+
