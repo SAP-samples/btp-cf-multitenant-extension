@@ -7,7 +7,7 @@
     4. [Understand the Multitenancy](./discover/multitenancy/README.md)
     5. [Learn the basics of SAP BTP](./discover/sap-btp-basics/README.md)
     6. [Learn about Node.js](./discover/nodejs/README.md)
-    7. [Discover the SAP Cloud SDK](./discover-sap-cloud-sdk/../complete/complete-mission/README.md)
+    7. [Discover the SAP Cloud SDK](./discover-sap-cloud-sdk/README.md)
     8. [Discover SAPUI5 and SAP Business Application Studio](./discover/ui5-fiori-elements-business-app-studio/README.md)
 * [EXPLORE](./explore/README.md)
     1. [Understand the Database Service](../../tree/main/db/README.md)
