@@ -85,7 +85,7 @@ Now, you can deploy the application in your subacccount and space by using the M
 cd mta_archives
 cf deploy easyfranchise_1.0.0.mtar
 ```
-If the deployment is successful, you can check in the **Applications** section of your space if all the modules are running (exception: admin-db is only used during deployment and is then stopped).
+If the deployment is successful, you can check in the **Applications** section of your space if all the modules are running (exception: admin-db is only in `Running` state during deployment and is then it goes to `Stopped` state once the database artifacts are deployed successfully).
 
 ![apps](./images/apps.png)
 
