@@ -1,44 +1,50 @@
-# Tenant Specific Route Creation
-Once you create the application and try to launch it, you get an error like this.
+# Create Tenant-Specific Route
+
+Once you create the application and try to launch it, you get the following error.
 ![404 route](./route.png)
 
-This error occurs because there is no application with this route deployed yet. Now you need to create a route for this subaccount and target it to the approuter. The approuter later will route the traffic to the application using the tenant host pattern. More details can be found in the [approuter documentation](../../../../tree/main/approuter/README.md).  
-Rotue creation can be done automatically or with Cloud Foundry APIs during onboarding, or via CLI/ manually. Let's check how to do it manually. 
-# Route Creation Option 1 using BTP Cockpit
+This error occurs because there is no application with this route deployed yet. Now, you need to create a route for this subaccount and target it to the approuter. The approuter will then route the traffic to the application using the tenant host pattern. See the [approuter documentation](../../../../tree/main/approuter/README.md).  
+You can create the route automatically or with Cloud Foundry APIs during onboarding, or manually using the Cloud Foundry command line interface(cf CLI).
 
-1. Go to the provider subaccount. 
-2. Open the cloud foundry space where the multitenant application is deployed.
-3. Click on Routes on the left side and then click on `New Route`.
-4. Select the CF landscape from the dropdown. You can refer to the above picture section 2 for more details.
-5. Enter your subaccount specific route. You can refer to the above picture's section 1 for more details.
-6. Click on Save. 
+# Option 1: Using SAP BTP Cockpit
+
+1. In the SAP BTP cockpit, navigate to the provider subaccount. 
+2. Choose **Cloud Foundry** > **Spaces**, and then choose the space where the Easy Franchise application is deployed.
+4. Choose **Routes**, and then choose **New Route**.
+5. Select the domain from the dropdown menu.
+6. Enter your subaccount-specific route.
+7. Choose **Save**.
    ![Create Route](./createRoute.png)
 
-7. Now from the list of created routes, select the newly created route. 
-8. Choose the map route icon from `Actions` tab. 
-9. Select the approuter and then click on `Save`.
+7. From the routes list, select the route you just created. 
+8. Choose **Actions** > **Map Route**. 
+9. From the **Application** dropdown menu, select **approuter**. Choose **Save**.
     
    ![Create route](./bind-route.png)
 
-With this you are ready to run the application. 
+You are ready to run the application. 
 
-# Route Creation Option 2: Using Cloud Foundry CLI
-The Route Creation can be done using the Cloud Foundry CLI. Here's a quick guide to do it. Please alter the host name and app name as per your deployed application's host and domain.
-1. Login to your provider CF space where the multitenant application is deployed.
+# Option 2: Using cf CLI
+You can create the route using the cf CLI. Change the hostname and the application name depending of the host and domain of your deployed application.
+
+1. Log in to cf CLI and navigate to your provider's Cloud Froundry space where the Easy Franchise application is deployed.
 2. Run the following command:
    
-   `cf map-route approuter cfapps.eu12.hana.ondemand.com --hostname subscriber-subaccount-dev-approuter`.
+   `cf map-route approuter cfapps.eu12.hana.ondemand.com --hostname subscriber-subaccount-dev-approuter`
 
-   Here the approuter is the name of the approuter app. The `cfapps.eu12.hana.ondemand.com` is the domain of the approuter app. The `--hostname` is the hostname obtained after subscribing to the approuter.
-   Please refer to the below picture for more details.
+   where:
+   * The approuter is the name of the approuter application
+   * The `cfapps.eu12.hana.ondemand.com` is the domain of the approuter application
+   * The `--hostname` is the hostname obtained after subscribing to the approuter
+  
    ![Route](./route.png)
 
-   The output of the command is:
+   The output of the command looks like this:
 
    ![cli route](./cliroute.png)
 
-Now you can run the application.
+You are ready to run the application. 
 
-# Route Creation Option 3: Using Cloud Foundry APIs during (Onboarding)
-Another option to create the routes are to use the Cloud Foundry APIs during onboarding. Different api calls can be used to create the route and map it to the approuter. 
-Here's the [API Reference](https://v3-apidocs.cloudfoundry.org/version/3.117.0/index.html#the-service-route-binding-object).
+# Option 3: Using Cloud Foundry APIs
+Another option to create the route is to use the Cloud Foundry APIs during onboarding. Different API calls can be used to create the route and map it to the approuter. 
+See the [API Reference](https://v3-apidocs.cloudfoundry.org/version/3.117.0/index.html#the-service-route-binding-object).
