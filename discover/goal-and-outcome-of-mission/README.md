@@ -8,16 +8,11 @@ Going through the mission, you will:
 ## Solution Highlights
 - Multitenancy (tenant-specific access)
 - Authentication and authorization of users
-- Service Manager implementaion for Schema creation and access
+- Service Manager implementation for schema creation and access
 - Database Credentials Caching for faster access
 - Tenant provisioning
 - Reuse of service dependency callback implementation
 - Use of SAP Cloud SDK to read/write data from SAP S/4HANA
-
-
-## Develop the Multitenant Application
-
-In the SAP BTP, Cloud Foundry environment, you can develop and run multitenant applications that can be accessed by multiple consumers (tenants) through a dedicated URL.
 
 ## Solution Diagram 
 
