@@ -1,4 +1,4 @@
-# Tell us what do you think
+# Tell Us What Do You Think
 
 Please give us your feedback about this mission!
 * You can use the survey displayed when you complete the mission.
