@@ -14,7 +14,7 @@ To run the Easy Franchise application, follow these steps:
 At this step, you are ready to run the application. To customize the application with a subscriber-specific title and icons, you need to follow the steps below.
 
 ## Customizing the application
-Each tenant needs to have a unique title and icon. To customize the application, follow these steps:
+Each customer needs to have a unique title and icon. To customize the application, follow these steps:
 
 1. Change the appication URL, add `/adminui/` after `.com`. It will look like this: `https://<your-subaccount>.com/adminui/`.
 2. Change the application logo by choosing **Browse** and selecting the logo.
