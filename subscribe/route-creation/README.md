@@ -8,7 +8,7 @@ You can create the route automatically or with Cloud Foundry APIs during onboard
 
 # Option 1: Using SAP BTP Cockpit
 
-1. In the SAP BTP cockpit, navigate to the provider subaccount. 
+1. In the SAP BTP cockpit, navigate to the provider subaccount. Provider Subaccount is the place where the multitenant applications will be deployed. 
 2. Choose **Cloud Foundry** > **Spaces**, and then choose the space where the Easy Franchise application is deployed.
 4. Choose **Routes**, and then choose **New Route**.
 5. Select the domain from the dropdown menu.
