@@ -42,8 +42,8 @@
    4. [Create Route](./subscribe/route-creation/README.md)
    5. Provisioning Users and Identity Authentication Service
       1. [Assign Roles](./subscribe/assign-roles/README.md)
-      2. [Set up SAP Identity and Authentication Service](./subscribe/idp/README.md)
-   6. [Test the Multitenancy](./subscribe/run-application/README.md)
+      2. [Set Up the Identity Authentication Service](./subscribe/idp/README.md)
+   6. [Test the Multitenancy](./subscribe/run-application/README.md#running-the-application)
    7. Video
    8. Troubleshooting
  

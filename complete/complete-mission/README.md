@@ -1,4 +1,4 @@
-# Complete the mission
+# Complete the Mission
 
 Congratulations! You and your team have completed this mission. 
 
