@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this section, we will configure a custom identity provider which has the customer users/employees to log in to the subaccount in SAP Business Technology Platform (SAP BTP).
+In this section, we will configure a custom identity provider. This identity provider is then used by the subscribers to access the multitenant application. The subscriber can have their own corporate identity providers, using this step trust will be established between the BTP subaccount and custom identity provider. 
 Depending on your global account, you might see the default identity provider, which is configured automatically. The default identity provider cannot be deleted, it can only be enabled or disabled. 
 
 ## Prerequisites
