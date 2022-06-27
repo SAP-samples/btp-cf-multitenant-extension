@@ -1,5 +1,5 @@
-# Subscribing the Easy Franchise Application 
-This step is going to guide you through the process of subscribing to the Easy Franchise Application.
+# Subscribe to the Easy Franchise Application 
+This step is going to guide you through the process of subscribing to the Easy Franchise application.
 
 ## Steps
 1. Go to the newly created subscriber subaccount.
