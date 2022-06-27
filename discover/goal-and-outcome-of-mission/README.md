@@ -34,7 +34,7 @@ When developing tenant-aware applications in the Cloud Foundry environment, keep
 
 ## Solution Diagram 
 
-![Solution diagram](./images/Slide5.jpg)
+![Solution diagram](./images/solutiondiagram.png)
 
 ## TAM Diagram
 
