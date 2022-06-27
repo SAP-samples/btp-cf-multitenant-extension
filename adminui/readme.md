@@ -15,4 +15,4 @@ Here's a preview of the Admin User Interface and how you can use it:
 
 ## Credits
 
-This project has been generated with [easy-ui5](https://github.com/SAP)
+This project has been generated with [easy-ui5](https://github.com/SAP).
