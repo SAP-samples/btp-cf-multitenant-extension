@@ -1,4 +1,4 @@
-# Learn the basics of SAP BTP
+# Learn the Basics of SAP BTP
 
 SAP Business Technology Platform (SAP BTP) offers you the ability to turn data into business value, compose end-to-end business processes, and build and extend existing SAP solutions quickly.
 
