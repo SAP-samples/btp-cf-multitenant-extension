@@ -3,8 +3,8 @@
 - DISCOVER
     - [Learn how to use missions and project boards in SAP Discovery Center](./discover/how-to-use-missions/README.md)
     - [Learn about the goal and outcome of the mission](./discover/goal-and-outcome-of-mission/README.md)
-    - [Learn the Business Scenario of the mission](./discover/business-scenario/README.md)
-    - [Understand the Multitenancy](./discover/multitenancy/README.md)
+    - [Learn the business scenario of the mission](./discover/business-scenario/README.md)
+    - [Understand the multitenancy](./discover/multitenancy/README.md)
     - [Learn the basics of SAP BTP](./discover/sap-btp-basics/README.md)
     - [Learn about Node.js](./discover/nodejs/README.md)
     - [Discover the SAP Cloud SDK](./discover-sap-cloud-sdk/README.md)
