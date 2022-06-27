@@ -22,4 +22,3 @@ Going through the mission, you will:
 
 ![TAM](./images/tam.png)
 
-
