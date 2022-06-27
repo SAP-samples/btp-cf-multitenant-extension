@@ -4,7 +4,7 @@
 
 ### SAP Partner ​
 
-The company Easy Franchise is an SAP Partner providing a multitenant SaaS extension application for SAP S/4HANA called Easy Franchise, that allows you to onboard new business partners easily. ​
+The company Easy Franchise is an SAP partner providing a multitenant SaaS extension application for SAP S/4HANA called Easy Franchise, that allows you to onboard new business partners easily. ​
 
 - The extension application helps with:​
 
@@ -19,7 +19,7 @@ The company Easy Franchise is an SAP Partner providing a multitenant SaaS extens
 ### SAP Customers​
 
 City Scooter, Bike Sharing and Car Renting are three different companies renting electric vehicles to franchise companies. ​
-In order to speed up the onboarding of new franchises, each of them purchased the EasyFranchise application. ​
+In order to speed up the onboarding of new franchises, each of them purchased the Easy Franchise application. ​
 Each one of these companies has their own SAP S/4HANA system which would be connected to the Easy Franchise application.
 
 ### Franchise Companies​
