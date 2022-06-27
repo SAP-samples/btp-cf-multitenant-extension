@@ -1,9 +1,9 @@
 # Configure Your Subaccount in SAP BTP
-In this section, we set up the SAP BTP subaccount for developing the Easy Franchise application.
+In this section, we set up the subaccount in SAP BTP for developing the Easy Franchise application.
 
 **Prerequite:** You must have an adminstrator role for SAP BTP.
 
-1. Log in to SAP BTP cockpit and select your global account.
+1. Log in to the SAP BTP cockpit and select your global account.
 2. In the **Account Explorer**, choose **Create** > **Subaccount**.
 
    ![create](images/createSubAccount.png)
