@@ -21,13 +21,13 @@
 
 - PREPARE
     - [Explore APIs & events in SAP API Business Hub](./prepare/explore-apis-and-events/README.md)
-    - [Make sure prerequisites are fulfilled and all required systems are in place](./prepare/mission-prerequisites/README.md)
+    - [Make sure that prerequisites are fulfilled and all required systems are in place](./prepare/mission-prerequisites/README.md)
     - [[OPTIONAL] Create a Test SAP S/4HANA System Using SAP Cloud Appliance Library](https://github.com/SAP-samples/cloud-extension-ecc-business-process/blob/mission/mission/cal-setup/CALS4H.md)
     
 
 - SET UP
     - [Configure your global account and subaccounts in SAP BTP](./set-up/configure-account/README.md)
-    - [Create a SAP HANA Cloud Instance](./set-up/hana/README.md)
+    - [Create an SAP HANA Cloud Instance](./set-up/hana/README.md)
 
 - BUILD
    - [Build and deploy the EasyFranchise Application](./build/bas/README.md)
@@ -36,11 +36,11 @@
 - SUBSCRIBE
    - [Create a Customer Subaccount](./subscribe/create-subscriber-subaccount/README.md)
    - [Set up SAP S/4HANA on-premise System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
-   - [Set up End-to-End Connectivity SAP BTP to SAP S/4HANA on-premise](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
+   - [Set up end-to-end Connectivity SAP BTP to SAP S/4HANA on-premise](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
    - [Subscribe the Easy Franchise Application](./subscribe/subscription/README.md)
    - [Create Route](./subscribe/route-creation/README.md)
    - [Assign Roles](./subscribe/assign-roles/README.md)
-   - [Set Up the Identity Authentication Service](./subscribe/idp/README.md)
+   - [Set up the Identity Authentication Service](./subscribe/idp/README.md)
    - [Test the Multitenancy](./subscribe/run-application/README.md#running-the-application)
    -  Video
    -  Troubleshooting
