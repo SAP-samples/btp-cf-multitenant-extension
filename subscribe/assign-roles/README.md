@@ -1,6 +1,6 @@
 # Assign Roles
 
-To access the application, the user needs to be assigned with **Coordinator** role. To assign this role to an individual user, you have to: 
+To access the application, the user needs to be assigned with **Coordinator** role. To assign this role to an individual user, you've to: 
 
 1. In the SAP BTP cockpit, navigate to your subaccount. 
 2. Choose **Security** > **Role Collections**.
