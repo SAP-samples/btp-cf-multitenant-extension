@@ -14,7 +14,7 @@ The company Easy Franchise is an SAP partner providing a multitenant SaaS extens
 
     - Sending a notification to the respective mentor about their assignment, so that they can prepare the next onboarding steps.​
 
-    - Collecting standard information/guidelines in one central place that will be shared with the new franchise company.​
+    - Collecting standard information/guidelines in one central place that can be shared with the new franchise company.​
 
 ### SAP Customers​
 
@@ -22,11 +22,12 @@ City Scooter, Bike Sharing and Car Renting are three different companies renting
 In order to speed up the onboarding of new franchises, each of them purchased the Easy Franchise application. ​
 Each one of these companies has their own SAP S/4HANA system which would be connected to the Easy Franchise application.
 
+
 ### Franchise Companies​
 
-Franchise companies are business partners that are take over the B2C. They are responsible for managing the vehicles parc in a defined region (for example, in the same city or in several cities).
+Franchise companies are business partners that are taken over the B2C. They're responsible for managing the vehicles part in a defined region (for example, in the same city or in several cities).
 
-- Not really relevant in our scenario​
+- Not relevant in our scenario​
 
 ## Business Story
 

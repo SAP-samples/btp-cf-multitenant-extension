@@ -3,8 +3,8 @@
 
 ## Introduction
 
-In this section, we will configure a custom identity provider. This identity provider is then used by the subscribers to access the multitenant application. The subscriber can have their own corporate identity providers, using this step trust will be established between the BTP subaccount and custom identity provider. 
-Depending on your global account, you might see the default identity provider, which is configured automatically. The default identity provider cannot be deleted, it can only be enabled or disabled. 
+In this section, we'll configure a custom identity provider. This identity provider is then used by the subscribers to access the multitenant application. The subscriber can have their own corporate identity providers, using this step trust is established between the BTP subaccount and custom identity provider. 
+Depending on your global account, you might see the default identity provider, which is configured automatically. The default identity provider can't be deleted, it can only be enabled or disabled. 
 
 ## Prerequisites
 
@@ -14,9 +14,9 @@ Your user has administrative rights in the global account and in the subaccount 
 
 An SAML service provider interacts with an SAML 2.0 identity provider to authenticate users signing in using the single sign-on (SSO) mechanism. In this scenario, the Identity Authentication service acts as a service provider representing a single subaccount. To establish the trust between an identity provider and a subaccount, you must provide the SAML details for a web-based authentication in the identity provider itself. Administrators must configure the trust on both sides, in the subaccount of the service provider and in the SAML identity provider. Here, we assume that the customer has purchased a tenant for the Identity Authentication service.
 
-### Register Your Subaccount in SAP BTP in the Custom SAML 2.0 Identity Provider
+### Register Your Subaccount in SAP BTP in the Custom SAML 2.0 Identity Provider.
 
-You can manage the trust configurations for a global account only if you have created the global account or if you are an SAP BTP administrator of the account and you are an administrator in the company's Identity Authentication tenant.
+You can manage the trust configurations for a global account only if you've created the global account or if you're an SAP BTP administrator of the account and you're an administrator in the company's Identity Authentication tenant.
 
 1. In the SAP BTP cockpit, navigate to the customer subaccount.
 2. Choose **Security** > **Trust Configuration**. 
@@ -40,7 +40,7 @@ You can manage the trust configurations for a global account only if you have cr
    
    ![Configure SAML](./images/CustIDP-configureSAML.png)
    
-10. In the **Define from Metadata** section, choose **Browse**. Select the metadata XML file you have downloaded in **step 3**.
+10. In the **Define from Metadata** section, choose **Browse**. Select the metadata XML file you've downloaded in **step 3**.
 
    ![Save SAML](./images/CustIDP-saveSAML.png)   
 
@@ -89,9 +89,9 @@ You can manage the trust configurations for a global account only if you have cr
 
 21. Repeat the last two steps by mapping the **EasyFranchise** group to all the users that should have access to the Easy Franchise application. 
 
-### Establish Trust with a Custom SAML 2.0 Identity Provider in Your Subaccount
+### Establish Trust with a Custom SAML 2.0 Identity Provider in Your Subaccount.
 
-You have your company's SAML 2.0 identity provider, for example, the Identity Authentication service. This is where your business users are stored. You must establish a trust with your custom SAML 2.0 identity provider in your subaccount in SAP BTP. The following procedure describes how to establish trust in the Identity Authentication service.
+You've your company's SAML 2.0 identity provider, for example, the Identity Authentication service. This is where your business users are stored. You must establish a trust with your custom SAML 2.0 identity provider in your subaccount in SAP BTP. The following procedure describes how to establish trust in the Identity Authentication service.
 
 1. Choose **Application & Resources** > **Tenant Settings**.
 2. Choose **SAML 2.0 Configuration**.
@@ -113,7 +113,7 @@ You have your company's SAML 2.0 identity provider, for example, the Identity Au
    ![Configure Trust](./images/CustIDP-configurenewTrust1.png)
    
 8. Choose **Save**.
-9. Assign the group we have created at the Identity Authentication tenant to the role collection of the Easy Franchise application. In the SAP BTP cockpit, choose **Security** > **Role Collection**. Choose **Coordinator**, and then choose **Edit**. In the **User Groups** section, select your identity provider and map it to the **EasyFranchise** group. Choose **Save**. 
+9. Assign the group we've created at the Identity Authentication tenant to the role collection of the Easy Franchise application. In the SAP BTP cockpit, choose **Security** > **Role Collection**. Choose **Coordinator**, and then choose **Edit**. In the **User Groups** section, select your identity provider and map it to the **EasyFranchise** group. Choose **Save**. 
 
    ![Assign Role](./images/CustIDP-assignRole.png)
 
