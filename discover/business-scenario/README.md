@@ -1,4 +1,5 @@
 # Business Scenario 
+The below picture represents various layers of this solution. Top level is the provider of multitenant application. Middle layer has the subscriber and at bottom is the new franchises. 
 ![Persona Overview](./images/EasyFranchise%20persona.png)
 
 
@@ -25,7 +26,7 @@ Each one of these companies has their own SAP S/4HANA system which would be conn
 
 ### Franchise Companies​
 
-Franchise companies are business partners that are taken over the B2C. They're responsible for managing the vehicles part in a defined region (for example, in the same city or in several cities).
+Franchise companies are business partners that are taken over the business-to-consumer. They're responsible for managing the vehicles part in a defined region (for example, in the same city or in several cities).
 
 - Not relevant in our scenario​
 
