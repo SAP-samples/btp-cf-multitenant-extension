@@ -5,7 +5,7 @@ These subaccounts are created and configured by an administrator in SAP BTP. The
 
 Follow these steps to create a subaccount:
 
-1. Navigate to the global account, choose **Account Explorer**, and then choose **Create** > **Subaccount**.
+1. In the SAP BTP cockpit, navigate to the global account, choose **Account Explorer**, and then choose **Create** > **Subaccount**.
 2. In the **Create Subaccount** wizard:
     * Enter a name for the subaccount.
     * Select a region from the dropdown menu. Make sure the region is the same region where the multitenant application is deployed.
