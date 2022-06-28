@@ -19,7 +19,7 @@ Going through the mission, you'll:
 ![Solution diagram](./images/solutiondiagram.png)
 
 ## Technical Architecture Modeling (TAM) Diagram
+The below diagram explains various data flow directions and compontents part of the application. On the right side we have Subscriber's S/4 HANA System connected to the Multitenant solution on the left side of diagram.
 
 ![TAM](./images/tam.png)
-
 
