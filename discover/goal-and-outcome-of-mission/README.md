@@ -1,9 +1,9 @@
-# Learn About the Goal and Outcome of the Mission
+# Learn About the Goal and Outcome of the Mission.
 
-Going through the mission, you will:
-* Get aligned with the concept of Software-as-a-Service (SaaS) on SAP BTP
+Going through the mission, you'll:
+* Get aligned with the concept of Software-as-a-Service (SaaS) on SAP BTP.
 * Learn how to build a multitenant application with SAP HANA Cloud and the SAP Cloud Application Programming Model.
-* Learn how to subscribe a customer and connect his SAP S/4HANA system to your SaaS solution.
+* Learn how to subscribe a customer and connect their SAP S/4HANA system to your SaaS solution.
 
 ## Solution Highlights
 - Multitenancy (tenant-specific access)
