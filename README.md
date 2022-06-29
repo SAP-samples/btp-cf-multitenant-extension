@@ -36,7 +36,7 @@
 - SUBSCRIBE
    - [Create a customer subaccount](./subscribe/create-subscriber-subaccount/README.md)
    - [Set up the SAP S/4HANA system](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
-   - [Setup SAP Cloud Connector and establish a trust to the SAP S/4HANA System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/cloud-connector/README.md)
+   - [Set up SAP Cloud Connector and establish a trust to the SAP S/4HANA System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/cloud-connector/README.md)
    - [Set up an end-to-end connectivity between SAP BTP and SAP S/4HANA](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
    - [Subscribe the Easy Franchise application](./subscribe/subscription/README.md)
    - [Create tenant-specific route](./subscribe/route-creation/README.md)
