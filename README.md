@@ -31,9 +31,8 @@
 
 - BUILD
    - [Build and deploy the Easy Franchise application](./build/bas/README.md)
-   
-   
-    
+  
+     
 - SUBSCRIBE
    - [Create a customer subaccount](./subscribe/create-subscriber-subaccount/README.md)
    - [Set up an SAP S/4HANA system](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
