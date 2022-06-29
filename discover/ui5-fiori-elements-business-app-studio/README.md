@@ -1,4 +1,4 @@
-# Discover SAPUI5, SAP Fiori Elements and SAP Business Application Studio
+# Discover SAPUI5 and SAP Business Application Studio
 
 **SAPUI5** is an HTML5 framework designed to build cross-platform, responsive, enterprise-grade applications. It is the leading UI technology of SAP’s user experience strategy.
 

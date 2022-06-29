@@ -27,7 +27,7 @@
 
 - SET UP
     - [Configure your global account and subaccounts in SAP BTP](./set-up/configure-account/README.md)
-    - [Create an SAP HANA Cloud instance](./set-up/hana/README.md)
+    - [Create a SAP HANA Cloud instance](./set-up/hana/README.md)
 
 - BUILD
    - [Build and deploy the Easy Franchise application](./build/bas/README.md)
@@ -35,13 +35,14 @@
      
 - SUBSCRIBE
    - [Create a customer subaccount](./subscribe/create-subscriber-subaccount/README.md)
-   - [Set up an SAP S/4HANA system](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
+   - [Set up the SAP S/4HANA system](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/s4h-setup/README.md)
+   - [Setup SAP Cloud Connector and establish a trust to the SAP S/4HANA System](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/cloud-connector/README.md)
    - [Set up an end-to-end connectivity between SAP BTP and SAP S/4HANA](https://github.com/SAP-samples/cloud-extension-html5-sample/blob/mission/mission/connectivity/README.md) 
-   - [Subscribe to the Easy Franchise application](./subscribe/subscription/README.md)
-   - [Create route](./subscribe/route-creation/README.md)
+   - [Subscribe the Easy Franchise application](./subscribe/subscription/README.md)
+   - [Create tenant-specific route](./subscribe/route-creation/README.md)
    - [Assign roles](./subscribe/assign-roles/README.md)
-   - [Set up the Identity Authentication eervice](./subscribe/idp/README.md)
-   - [Test the multitenancy](./subscribe/run-application/README.md#running-the-application)
+   - [Configure custom identity provider](./subscribe/idp/README.md)
+   - [Run the Easy Franchise application](./subscribe/run-application/README.md#running-the-application)
    -  Video
    -  Troubleshooting
  
