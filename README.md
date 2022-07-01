@@ -45,7 +45,6 @@ The below picture represents various layers of this solution. Top level is the p
 
 ![Persona Overview](/documentation/images/EasyFranchise%20persona.png)
 
-## Business Scenario
 
 ### SAP PARTNER ​
 
@@ -111,7 +110,7 @@ The below diagram explains various data flow directions and compontents part of 
 
 # Excercise
 
-1. [Get Started]()
+1. [Get Started](../../tree/mission/README.md)
 ## Known Issues
 <!-- You may simply state "No known issues. -->
 
