@@ -80,7 +80,8 @@ There are multiple ways to achieve database schema segregation. The recommendati
 # Solution Diagram 
 ![Solution diagram](/documentation/images/Slide5.jpg)
 
-# TAM Diagram
+# Technical Architecture Modeling (TAM) Diagram
+The below diagram explains various data flow directions and compontents part of the application. On the right side we have Subscriber's S/4 HANA System connected to the Multitenant solution on the left side of diagram.
 
 ![TAM](/documentation/images/tam.png)
 
