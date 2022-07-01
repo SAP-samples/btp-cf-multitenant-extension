@@ -11,7 +11,7 @@ const {businessPartnerApi} = businessPartnerService();
 const getBusinessPartner = async (token) => {
     // TODO: filter for identifying new business partners
     const resultPromise = await businessPartnerApi.requestBuilder().getAll().filter(businessPartnerApi.schema.SEARCH_TERM_1.equals('VERIFIED'))
-        .execute({destinationName: 's4h', jwt: token}, {useCache: true});
+        .execute({destinationName: 'bupa', jwt: token}, {useCache: true});
     return resultPromise;
 };
 
