@@ -15,7 +15,7 @@ const upadteBusinessPartner = async (token, busienssPartnerId, MENTORNAME, logge
     logger.info('upadteBusinessPartner', busienssPartnerId, MENTORNAME);
     const bp = businessPartnerApi.entityBuilder().businessPartner(busienssPartnerId).searchTerm1(`Mentor:${MENTORNAME}`).build();
     const resultPromise = await businessPartnerApi.requestBuilder()
-        .update(bp).execute({destinationName: 's4h', jwt: token}, {useCache: true});
+        .update(bp).execute({destinationName: 'bupa', jwt: token}, {useCache: true});
     console.log(resultPromise);
     return resultPromise;
 };
