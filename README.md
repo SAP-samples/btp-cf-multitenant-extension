@@ -40,7 +40,9 @@ There are multiple ways to achieve database schema segregation. The recommendati
 
 
 
-# Business scenario persona overview​
+# Business Scenario
+The below picture represents various layers of this solution. Top level is the provider of multitenant application. Middle layer has the subscriber and at bottom is the new franchises.
+
 ![Persona Overview](/documentation/images/EasyFranchise%20persona.png)
 
 ## Business Scenario
