@@ -105,14 +105,19 @@ The below diagram explains various data flow directions and compontents part of 
 - Cloud Connector
 - [SAP Cloud SDK](https://sap.github.io/cloud-sdk/docs/js/getting-started)
 - [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-- [Nodejs](https://linkhttps://nodejs.org/en/download/)
+- [Nodejs](https://nodejs.org/en/download/)
 - Code Editor of your Choice
 
 # Excercise
 
 1. [Get Started](../../tree/mission/README.md)
+
+
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+
+If service instance creation is failing, refer to the deploy phase of application and check if you have changed the `xsappname` of XSUAA and SaaS Provisioning Service.
+
+
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/btp-cf-multitenant-extension/issues) in this repository if you find a bug or have questions about the content.
