@@ -42,7 +42,7 @@
    - [Create tenant-specific route](./subscribe/route-creation/README.md)
    - [Assign roles](./subscribe/assign-roles/README.md)
    - [Configure custom identity provider](./subscribe/idp/README.md)
-   - [Run the Easy Franchise application](./subscribe/run-application/README.md#running-the-application)
+   - [Run the Easy Franchise application](./subscribe/run-application/README.md)
    
    
  - COMPLETE
