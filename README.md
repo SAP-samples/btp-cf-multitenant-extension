@@ -43,9 +43,7 @@
    - [Assign roles](./subscribe/assign-roles/README.md)
    - [Configure custom identity provider](./subscribe/idp/README.md)
    - [Run the Easy Franchise application](./subscribe/run-application/README.md#running-the-application)
-   -  Video
-   -  Troubleshooting
- 
+   
  - COMPLETE
     - [Tell us what do you think](./complete/give-feedback/README.md)
     - [Next steps](./complete/next-steps/README.md)
