@@ -1,11 +1,11 @@
 # Understand the Admin Service
 
-The Admin service is responsible for managing the company-specific data and customization. Organizations need to have their own name and logo in the applications they are subscribed to. This service is used to manage this kind of data. Here's the list of funcationalities this service offers: 
+The Admin service is responsible for managing the company-specific data and customization. Organizations need to have their name and logo in the applications they are subscribed to. This service is used to manage this kind of data. Here's the list of functionalities this service offers: 
 * Managing the company logo
-* Setting the title of company
-* Creating the mentor masterdata
+* Setting the title of the company
+* Creating the mentor master data
 
-The Admin service is a microservice that uses the SAP Service Manager to fetch tenant-specific SAP HANA Deployment Infrastructure (HDI) container credentials based on the tenant ID of subscriber subaccount. Once we get the credentials we connect to the tenant specific hana containers. You can find the connection setting in the [service-manager.js](./utility/service-manager.js) file.
+The Admin service is a microservice that uses the SAP Service Manager to fetch tenant-specific SAP HANA Deployment Infrastructure (HDI) container credentials based on the tenant ID of the subscriber subaccount. Once we get the credentials we connect to the tenant-specific hana containers. You can find the connection setting in the [service-manager.js](./utility/service-manager.js) file.
 
 The configuration of the Admin service is stored in a database. The database is configured in the [Configuration.hdbtable](../db//src/data/Configuration.hdbtable) file.
 

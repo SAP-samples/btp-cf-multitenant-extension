@@ -28,19 +28,6 @@ const saasRoute = () => {
       logger.info('>>>>>>>>>>>>>>>>>>>', tenantHost);
       const tenantUrl = `https://${tenantHost}${/\.(.*)/gm.exec(appEnv.app.application_uris[0])[0]}`;
       logger.info(`-->>>>> ${tenantUrl}`);
-      // TODO: Add logic to create Tenant DB
-      // logic to Create Route
-      // cfRouteHandler.createRoute(tenantHost, services.registry.appName)
-      //   .then(
-      //     (result) => {
-      //       logger.info(result);
-      //       res.status(200).send(tenantUrl);
-      //     },
-      //     (err) => {
-      //       logger.log(err.stack);
-      //       res.status(500).send(err.message);
-      //     },
-      //   );
       handleHDICreation(req.body.subscribedTenantId, logger).then((data) => {
         logger.info('HDI CONTAINER CREATED');
         dbHandler(data, req.body.subscribedTenantId, logger).then((dbData) => {

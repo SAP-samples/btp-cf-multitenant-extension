@@ -48,21 +48,6 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello for Provisioning Service 🟢 ');
 });
 
-// const lib = require('./srv/cfRouteHandler');
-
-// const services2 = xsenv.getServices({
-//   registry: { tag: 'SaaS' },
-// });
-
-// lib.createRoute('xyz', services2.registry.appName)
-//   .then(
-//     (result) => {
-//     console.log(result)
-//     },
-//     (err) => {
-//       console.log(err.stack);
-//     },
-//   );
 
 server.listen(port, () => {
   console.info(`Server Running now at post: ${port}`);

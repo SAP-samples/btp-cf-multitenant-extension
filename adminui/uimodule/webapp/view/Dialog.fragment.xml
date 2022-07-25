@@ -35,7 +35,7 @@
 				<Label text="Phone" />
 				<Input id="mentorPhone" type="Number">
 				</Input>
-				<Label text="experience" />
+				<Label text="Experience" />
                 <Input id="mentorExperiance" type="Number"></Input>
 			</f:content>
 		</f:SimpleForm>
