@@ -24,7 +24,7 @@ xmlns:core="sap.ui.core">
                         <IconTabBar id="iconTabBar1" class="sapUiResponsiveContentPadding">
                             <items>
                                 <IconTabFilter key="newFranchise" text="New Franchise">
-                                    <Table id="francisetable" inset="false" items="{
+                                    <Table id="francisetable" growing="true" inset="false" items="{
                                         path: 'newFranchiseModel>/'
                                     }">
                                         <headerToolbar>

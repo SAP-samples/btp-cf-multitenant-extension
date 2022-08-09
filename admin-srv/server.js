@@ -47,9 +47,12 @@ app.get('/', (req, res) => {
 const imageRouter = require('./routes/imageRoute')();
 const titleRouter = require('./routes/titleRoute')();
 const mentorRouter = require('./routes/mentorRoute')();
+const jobSchedulerRouter = require('./routes/jobSchedularRoute')();
+
 app.use('/api/v1', multerMemoryStore.single('att'), imageRouter);
 app.use('/api/v1', titleRouter);
 app.use('/api/v1', mentorRouter);
+app.use('/api/v1', jobSchedulerRouter);
 app.listen(port, () => {
   console.info(`Server running on port: ${port}`);
 });

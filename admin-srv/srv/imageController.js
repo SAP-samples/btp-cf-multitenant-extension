@@ -17,7 +17,6 @@ const uploadImage = async (req, logger) => {
           logger.error(error2);
           reject(error2);
         }
-        console.log(rs1);
         if (rs1[0].COUNT === 0) {
           statement.exec([id.toString(), buff], (err1, rs) => {
             if (err1) {

@@ -71,6 +71,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: es-sm 
+      - name: job-scheduler
       - name: ga-shareduaa
       - name: easyfranchise-logs
       - name: destination
@@ -91,6 +92,7 @@ modules:
       - name: es-sm
       - name: ga-shareduaa
       - name: easyfranchise-logs
+      - name: job-scheduler
 
  # scheduler
   - name: scheduler
@@ -100,6 +102,7 @@ modules:
       memory: 256M
     requires:
       - name: srv-api
+      - name: job-scheduler
       - name: easyfranchise-logs
       - name: ga-shareduaa
       - name: easyfranchise-tenant-hdiconatiner
@@ -121,6 +124,7 @@ modules:
           onboarding-url: ${default-url}
     requires:
       - name: es-sm
+      - name: job-scheduler
       - name: ga-shareduaa
       - name: gaconn
       - name: destination
@@ -238,3 +242,12 @@ resources:
      service-plan: hdi-shared
     properties:
       hdi-container-name: '${service-name}'
+
+  - name: job-scheduler
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: jobscheduler
+      service-plan: standard  # minimum schedule frequency of 5 minutes.
+      service-name: job-scheduler
+      config:
+         enable-xsuaa-support: true
