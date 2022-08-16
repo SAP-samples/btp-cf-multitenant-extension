@@ -76,6 +76,8 @@ modules:
       - name: easyfranchise-logs
       - name: destination
       - name: gaconn
+    properties:
+      searchTerm: EFVERIFIED
       
 # Admin Service
   - name: admin-srv
@@ -93,21 +95,24 @@ modules:
       - name: ga-shareduaa
       - name: easyfranchise-logs
       - name: job-scheduler
-
- # scheduler
-  - name: scheduler
-    type: nodejs
-    path: scheduler
-    parameters:
-      memory: 256M
-    requires:
       - name: srv-api
-      - name: job-scheduler
-      - name: easyfranchise-logs
-      - name: ga-shareduaa
-      - name: easyfranchise-tenant-hdiconatiner
     properties:
       businessPartnerAPI: ~{srv-api/srv-url} 
+
+#  # scheduler
+#   - name: scheduler
+#     type: nodejs
+#     path: scheduler
+#     parameters:
+#       memory: 256M
+#     requires:
+#       - name: srv-api
+#       - name: job-scheduler
+#       - name: easyfranchise-logs
+#       - name: ga-shareduaa
+#       - name: easyfranchise-tenant-hdiconatiner
+#     properties:
+#       businessPartnerAPI: ~{srv-api/srv-url} 
 
 ## Onboarding Service ####################
 ## Responsible for teanant provisioning ##
@@ -212,8 +217,6 @@ resources:
         appUrls:
           getDependencies: ~{onboarding-api/onboarding-url}/callback/v1.0/dependencies
           onSubscription: ~{onboarding-api/onboarding-url}/callback/v1.0/tenants/{tenantId}
-          onSubscriptionAsync: false
-          onUnSubscriptionAsync: false
           callbackTimeoutMillis: 300000
  ## Logging Service
   - name: easyfranchise-logs

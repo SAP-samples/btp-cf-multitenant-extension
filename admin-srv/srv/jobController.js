@@ -1,7 +1,6 @@
 /* eslint-disable quotes */
 const JobSchedulerClient = require('@sap/jobs-client');
 const xsenv = require('@sap/xsenv');
-const e = require('express');
 
 const jobSchedulerCreds = xsenv.serviceCredentials({ tag: 'jobscheduler' });
 const jwt = require('../utility/jwt');
@@ -17,21 +16,18 @@ const createJob = async (req, logger) => {
     };
     const scheduler = new JobSchedulerClient.Scheduler(options);
     const myJob = {
-      name: "testtenant",
+      name: `${subdomain.split("-")[0] + new Date().getMilliseconds()}`,
       description: "cron job that validates sales order requests",
-      action: "http://referenceapps-ga-saas2-dev-business-partner.cfapps.eu12.hana.ondemand.com/api/v1/new/bp",
+      action: `${process.env.businessPartnerAPI}/api/v1/new/bp`,
       active: true,
       httpMethod: "GET",
       schedules: [
         {
-          cron: "* * * * * */10 0",
-          description: "this schedule runs every 10 minutes",
-          data: {
-            salesOrderId: "1234",
-          },
+          cron: `* * * * * */${req.query.time} 0`,
+          description: `this schedule runs every ${req.query.time} minutes to fetch the tenant data and find new businesspartners`,
           active: true,
           startTime: {
-            date: "2022-08-09 00:00 +0000",
+            date: `${new Date().toISOString().split('T')[0]} 00:00 +0000`,
             format: "YYYY-MM-DD HH:mm Z",
           },
         },
@@ -39,12 +35,14 @@ const createJob = async (req, logger) => {
     };
     const scJob = { job: myJob };
 
-    scheduler.createJob(scJob, (error, body) => {
-      if (error) {
-        logger.error('Error registering new job %s', error);
-        throw new Error(error.message);
-      }
-      return body;
+    return new Promise((resolve, reject) => {
+      scheduler.createJob(scJob, (error, body) => {
+        if (error) {
+          logger.error('Error registering new job %s', error);
+          return reject(error);
+        }
+        return resolve(body);
+      });
     });
   } catch (schedulererr) {
     logger.error(schedulererr);
@@ -69,9 +67,9 @@ const getJob = async (req, logger) => {
       // Jobs retrieved successfully
       return result;
     });
-  } catch (e) {
-    logger.error(e);
-    throw e;
+  } catch (errr) {
+    logger.error(errr);
+    throw errr;
   }
 };
 

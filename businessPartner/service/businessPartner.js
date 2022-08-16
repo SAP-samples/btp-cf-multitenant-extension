@@ -10,7 +10,7 @@ const {businessPartnerApi} = businessPartnerService();
  */
 const getBusinessPartner = async (token) => {
     // TODO: filter for identifying new business partners
-    const resultPromise = await businessPartnerApi.requestBuilder().getAll().filter(businessPartnerApi.schema.SEARCH_TERM_1.equals('VERIFIED'))
+    const resultPromise = await businessPartnerApi.requestBuilder().getAll().filter(businessPartnerApi.schema.SEARCH_TERM_1.equals(`${process.env.searchTerm}`))
         .execute({destinationName: 'bupa', jwt: token}, {useCache: true});
     return resultPromise;
 };
