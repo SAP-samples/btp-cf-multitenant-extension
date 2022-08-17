@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start_orig": "node node_modules/@sap/approuter/approuter.js",
-    "start": "node approuter-start.js"
+    "start": "node node_modules/@sap/approuter/approuter.js"
   },
   "dependencies": {
-    "@sap/approuter": "11.3.0",
+    "@sap/approuter": "11.3.2",
     "@sap/xsenv": "^3.1.1",
     "@sap/xssec": "^3.2.8",
     "jwt-decode": "^3.1.2"
