@@ -11,6 +11,7 @@ sap.ui.define(
                 this.getImage();
                 this.getView().setModel(new JSONModel(), "mentorModel");
                 this.loadMentors();
+                this.getJobs();
                 this.csrfToken = this.getToken();
             },
             loadMentors: function () {
@@ -169,7 +170,48 @@ sap.ui.define(
               }else{
                 return true;
               }
+            },
+            getJobs: function () {
+                var that = this;
+                this.getView().setModel(new JSONModel(), "jobModel");
+                jQuery.ajax({
+                    url: "/admin/api/v1/job",
+                    type: "GET",
+                    success: function (data) {
+                        that.getView().getModel("jobModel").setData(data.results);
+                        that.getView().getModel("jobModel").refresh(true);
+                    },
+                    error: function (error) {
+                        MessageBox.error(error.responseText);
+                    }
+                });
+            },
+            scheduleJob: function () {
+                var that = this;
+                this.csrfToken = this.getToken();
+                var frequency = parseInt(this.getView().byId("jobFrequency").getValue(), 10);
+                this.getView().byId("jobFrequency").setValueState("None");
+                if( typeof(frequency) === 'number' && frequency >= 5){
+                jQuery.ajax({
+                    url: `/admin/api/v1/job?time=${frequency}`,
+                    type: "POST",
+                    headers: {
+                        "x-csrf-token": that.csrfToken,
+                        "Content-Type": "application/json",
+                    },
+                    success: function (data) {
+                        console.log(data);
+                        MessageToast.show("Job Scheduled");
+                    },
+                    error: function (error) {
+                        MessageBox.error("Error while creating Job");
+                    },
+                });
+            }else {
+                this.getView().byId("jobFrequency").getValueStateText('Please enter a valid number');
+                this.getView().byId("jobFrequency").setValueState("Error");
             }
+        }
         });
     }
 );

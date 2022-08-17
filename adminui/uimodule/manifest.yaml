@@ -1,7 +1,7 @@
 ---
 applications:
 - name: adminui
-  host: referenceapps-ga-saas2-dev-adminu
+  host: referenceapps-ga-saas2-dev-adminui
   memory: 64M
   path: webapp/
   buildpack: staticfile_buildpack

@@ -1,7 +1,7 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-cf-multitenant-extension)](https://api.reuse.software/info/github.com/SAP-samples/btp-cf-multitenant-extension)
 
 # Nodejs Multitenant Easyfranchise 
-Nodejs based  application showcasing Multi-tenant capabilities offered by SAP Business Technology Platform to build extensions.
+Nodejs based application showcasing Multi-tenant capabilities offered by SAP Business Technology Platform to build extensions.
 
 ## Develop the Multitenant Application
 
@@ -21,20 +21,20 @@ When developing tenant-aware applications in the Cloud Foundry environment, keep
 
 ## SAP BTP Multitenancy Model
 
-In this tutorial we will be using some keywords like provider account, sunscriber account, provisioning, onboarding and data isolation. 
+In this tutorial, we will be using some keywords like provider account, subscriber account, provisioning, onboarding and data isolation. 
 Let's start with the **Provider** account.
-A provider is the vendor of the application. Persona who is going to build, deliver and operate the multitenant saas solution for all the subscribers.
+A provider is the vendor of the application. Persona is going to build, deliver and operate the multitenant saas solution for all the subscribers.
 
 **Subscriber** is the consumer of the application. Persona who is going to use the multitenant SaaS solution.
 
-**Provisioning** is the process of onboarding new subscriber to the multitenant SaaS solution. During provisioning proccess, tenant database schema is created, any dependency is injected into the subscriber subaccount.
+**Provisioning** is the process of onboarding new subscribers to the multitenant SaaS solution. During the provisioning process, tenant database schema is created, any dependency is injected into the subscriber subaccount.
 
 
 ## BTP multitenancy model - Provider's point of view 
 ![Account Model](/documentation/images/account%20model.png)
 
 ## Database Schema Segregation Recommendation
-There are multiple ways to achieve database schema segregation. The recommendation is to have a dedicated database schema for each tenant. In this tutorial, we will be using 'hdi-container' based model for database schema segregation. This provides unique database schema and credentials for each of the tenants ensuring additional security and data isolation.
+There are multiple ways to achieve database schema segregation. The recommendation is to have a dedicated database schema for each tenant. In this tutorial, we will be using 'hdi-container' based model for database schema segregation. This provides a unique database schema and credentials for each of the tenants ensuring additional security and data isolation.
 
 ![Database schema recommendation](/documentation/images/tenant%20data%20seperation.jpeg)
 
@@ -79,15 +79,15 @@ The below picture represents various layers of this solution. Top-level is the p
 ![Solution diagram](/documentation/images/Slide5.jpg)
 
 # Technical Architecture Modeling (TAM) Diagram
-The below diagram explains various data flow directions and compontents part of the application. On the right side we have Subscriber's S/4 HANA System connected to the Multitenant solution on the left side of diagram.
+The below diagram explains various data flow directions and components part of the application. On the right side, we have the Subscriber's S/4 HANA System connected to the Multitenant solution on the left side of the diagram.
 
 ![TAM](/documentation/images/tam.png)
 
 
 # Solution Highlights
-- Multitenancy (tenant specific access)
+- Multitenancy (tenant-specific access)
 - Authentication and authorization of users
-- Service Manager implementaion for Schema creation and access
+Service Manager implementation for Schema creation and access
 - Database Credentials Caching for faster access
 - Tenant provisioning
 - Re-use service dependency callback implementation
@@ -105,14 +105,14 @@ The below diagram explains various data flow directions and compontents part of 
 - [Nodejs](https://nodejs.org/en/download/)
 - Code Editor of your Choice
 
-# Excercise
+# Exercise
 
 1. [Get Started](../../tree/mission/README.md)
 
 
 ## Known Issues
 
-If service instance creation is failing, refer to the deploy phase of application and check if you have changed the `xsappname` of XSUAA and SaaS Provisioning Service.
+If service instance creation is failing, refer to the deploy phase of the application and check if you have changed the `xsappname` of XSUAA and SaaS Provisioning Service.
 
 
 
@@ -122,7 +122,7 @@ If service instance creation is failing, refer to the deploy phase of applicatio
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
 ## Contributing
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+If you wish to contribute code or offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## License
 Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.

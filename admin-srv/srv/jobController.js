@@ -17,7 +17,7 @@ const createJob = async (req, logger) => {
     const scheduler = new JobSchedulerClient.Scheduler(options);
     const myJob = {
       name: `${subdomain.split("-")[0] + new Date().getMilliseconds()}`,
-      description: "cron job that validates sales order requests",
+      description: "cron job that calls HTTP endpoint",
       action: `${process.env.businessPartnerAPI}/api/v1/new/bp`,
       active: true,
       httpMethod: "GET",
@@ -60,13 +60,18 @@ const getJob = async (req, logger) => {
     };
     const scheduler = new JobSchedulerClient.Scheduler(options);
     const data = {};
-    scheduler.fetchAllJobs(data, (err, result) => {
-      if (err) {
-        return logger.error('Error retrieving jobs: %s', err);
-      }
-      // Jobs retrieved successfully
-      return result;
+    return new Promise((resolve, reject) => {
+      scheduler.fetchAllJobs(data, (err, result) => {
+        if (err) {
+           logger.error('Error retrieving jobs: %s', err);
+          return reject(err);
+        }
+        // Jobs retrieved successfully
+        logger.info(result)
+        return resolve(result);
+      });
     });
+    
   } catch (errr) {
     logger.error(errr);
     throw errr;

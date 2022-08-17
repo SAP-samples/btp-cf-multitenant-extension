@@ -1,33 +1,18 @@
-# Understand the Scheduler Service
+# Understand the usage of SAP Job Scheduling Service 
 
 The Scheduler service is a microservice responsible for scheduling and executing jobs to fetch new franchises (Business Partners) created in the SAP S/4HANA system. This helps keeping the list of Business Partners up to date, new mentors are not assigned in this list. 
 
-## Scheduling Logic 
-For the Scheduler service, we are using the [`node-cron`](https://www.npmjs.com/package/node-cron) Node.js package.
-Currently, the application if configured with 2 minutes interval to fetch the new Business Partners. Ideally, it should be a nightly job. You can find the code in the [`./index.js`](./index.js#L11-L14) file. The default value can be changed by replacing `*` with the standard values mentioned in the [`node-cron`](https://www.npmjs.com/package/node-cron) documentation.
+# SAP Job Scheduling Service
+SAP Job Scheduling service allows you to define and manage jobs that run once or on a recurring schedule. Use this runtime-agnostic service to schedule action endpoints in your application or long-running processes using Cloud Foundry tasks. Use REST APIs to schedule jobs, including long-running jobs asynchronously, and create multiple schedule formats for simple and complex recurring schedules. Manage jobs and tasks and manage schedules with a web-based user interface.
 
-This is the code snippet:
-
-```javascript
-
-cron.schedule('*/2 * * * *', () => {
-    fetchTenants();
-    console.log('running a job every 2 minute');
-  });
-```
-## Fetching New Business Partners
-To fetch Business Partners from each of the subscriber subaccount connected to SAP S/4HANA systems. We are using the `admin` table which has a tenant-specific information like tenant ID, and subdomain. We need the subdomain to generate tenant-specific OAuth token. 
-As we have declared `destination` and `connectivity `service` as a dependency to the multitenant application, this allows the same service keys in combination with the tenant-specific subdomain to generate the OAuth token for each subscriber subaccount.
-
-First, we fetch the list of subscribers from the `admin` table. Then, we loop through each of them to generate their OAuth tokens and then fetch the list of Business Partners from their respective SAP S/4HANA system.
-[Here's code sample for fetching the oAuth Token. ](./util/jwt.js#L11)
-
-Once we have the tenant-specific OAuth token, we can fetch the list of Business Partners from their respective SAP S/4HANA system using the [`Business Partner Service`](../businessPartner/). 
-Here's the [`link to function`](./srv/fetchTenants.js#L22-L47) that fetches the list of Business Partners.
-
-## Writing Job Logs
-As an administrator of this application, it's important to know the status of the jobs. This is to ensure that the scheduler is working as expected or if there's any issue with the subscribers. This is to be done by writing the logs in the [`EF.jobs`](../admin-db/src/data/Jobs.hdbtable) table.
+[Read More](https://help.sap.com/docs/JOB_SCHEDULER/07b57c2f4b944bcd8470d024723a1631/22c2df4d22cb4a05af4c9502a67597ae.html)
 
 
+# Multitenancy in SAP Job Scheduling Service 
+The SAP Job Scheduling service allows invocation of job actions in the context of Platform-as-a-Service (PAAS) or Software-as-a-Service (SaaS) tenants.
+
+This means that a deployed multitenant application can create/view/edit/delete jobs in the context of tenants, which have subscribed to it. To support a multitenancy scenario, a multitenancy provider application must be deployed and bound to instances of both the SAP SaaS Provisioning service and the SAP Job Scheduling service and define the SAP Job Scheduling service as a dependency.
+
+[Read More](https://help.sap.com/docs/JOB_SCHEDULER/07b57c2f4b944bcd8470d024723a1631/464b6130857c4bc98af21a0b528cd35a.html?q=multitenancy)
 
 
