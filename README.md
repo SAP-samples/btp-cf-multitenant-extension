@@ -16,7 +16,7 @@
     - [Understand the Admin user interface](../../tree/main/adminui/readme.md)
     - [Understand the approuter](../../tree/main/approuter/README.md)
     - [Understand the Onboarding service](../../tree/main/onboardingservice/README.md)
-    - [Understand the Scheduler service](../../tree/main/scheduler/README.md)
+    - [Understand the Scheduler service](../../tree/main/Scheduler-README.md)
 
 
 - PREPARE

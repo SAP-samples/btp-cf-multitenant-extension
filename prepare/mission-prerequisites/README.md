@@ -19,7 +19,7 @@ This section contains the prerequisites that you have to fulfil before you get s
      ```
 
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Visual Studio Code](https://code.visualstudio.com/download) or another suitable IDE or editor of your choice
+* [SAP Business Application Studio](https://help.sap.com/docs/SAP%20Business%20Application%20Studio) or another suitable IDE or editor of your choice
 * Optional: Git repository 
 
 ## SAP BTP Provider Account
