@@ -4,7 +4,7 @@
   "description": "Multitenancy handler application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test jest",
     "start": "XS_APP_LOG_LEVEL=debug node index.js",
     "dev": "NODE_ENV=dev XS_APP_LOG_LEVEL=debug nodemon index.js"
   },
@@ -15,6 +15,7 @@
   "author": "Gopal Anand",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^28.1.3",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
