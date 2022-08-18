@@ -45,11 +45,10 @@ The application requires the following entitlements in the SAP BTP cockpit:
 
 See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/00aa2c23479d42568b18882b1ca90d79.html?locale=en-US).
 
-**Optional:**
-
-Instead of developing the application locally, you can use **SAP Business Application Studio** for a cloud-based development.
-
-When dealing with failover and performance in a productive setup, you would like to run multiple instances of the application. Therefore, you would need additional instances of the Cloud Foundry runtime.
+> **Note**
+> 
+>Instead of developing the application locally, you can use **SAP Business Application Studio** for a cloud-based development.
+>When dealing with failover and performance in a productive setup, you would like to run multiple instances of the application. Therefore, you would need additional instances of the Cloud Foundry runtime.
 
 
 ## Prerequisites for SAP HANA Cloud
