@@ -9,6 +9,7 @@
     - [Learn about Node.js](./discover/nodejs/README.md)
     - [Discover the SAP Cloud SDK](./discover/discover-sap-cloud-sdk/README.md)
     - [Discover SAPUI5 and SAP Business Application Studio](./discover/ui5-fiori-elements-business-app-studio/README.md)
+    - [Learn about Application Interface Register- (AIR Key)](https://d.dam.sap.com/e/7XcJ73S/AIR%20Adoption%20Guide%20LATEST.pdf)
 - EXPLORE
     - [Understand the Database service](../../tree/main/db/README.md)
     - [Understand the Business Partner service](../../tree/main/businessPartner/README.md)
