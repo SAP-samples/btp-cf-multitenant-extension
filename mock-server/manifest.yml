@@ -1,0 +1,7 @@
+---
+applications:
+  - name: s4hana-cloud-mocks-ga
+    path: .
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack

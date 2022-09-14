@@ -1,0 +1,18 @@
+### Post new BP
+POST http://localhost:4004/api-business-partner/A_BusinessPartner
+Content-Type: application/json
+
+{
+    "BusinessPartner":"123",
+    "BusinessPartnerFullName":"ABCD Corp."
+}
+
+### Post new BP with address
+POST https://<mockserverurl>/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartner
+Content-Type: application/json
+
+{
+    "BusinessPartner":"21312312",
+    "BusinessPartnerFullName":"ad Corp.",
+    "SearchTerm1" : "EFVERIFIED"
+}

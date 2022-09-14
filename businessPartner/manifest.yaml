@@ -12,3 +12,4 @@ applications:
       - ga-shareduaa
       - easyfranchise-logs
       - es-sm
+      - job-scheduler

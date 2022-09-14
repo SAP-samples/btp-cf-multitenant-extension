@@ -1,0 +1,37 @@
+{
+  "name": "s4hana-cloud-mock",
+  "version": "1.0.0",
+  "description": "A simple CAP project for s/4hana cloud mock server",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
+    "express": "^4",
+    "sqlite3": "^5"
+  },
+  "devDependencies": {
+    "sqlite3": "^5"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development cds run --with-mocks --in-memory"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": ":memory:"
+        }
+      },
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
+      }
+    }
+  }
+}

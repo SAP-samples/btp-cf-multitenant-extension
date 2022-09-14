@@ -99,21 +99,6 @@ modules:
     properties:
       businessPartnerAPI: ~{srv-api/srv-url} 
 
-#  # scheduler
-#   - name: scheduler
-#     type: nodejs
-#     path: scheduler
-#     parameters:
-#       memory: 256M
-#     requires:
-#       - name: srv-api
-#       - name: job-scheduler
-#       - name: easyfranchise-logs
-#       - name: ga-shareduaa
-#       - name: easyfranchise-tenant-hdiconatiner
-#     properties:
-#       businessPartnerAPI: ~{srv-api/srv-url} 
-
 ## Onboarding Service ####################
 ## Responsible for teanant provisioning ##
 ##########################################
