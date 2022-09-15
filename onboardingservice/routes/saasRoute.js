@@ -24,7 +24,7 @@ const saasRoute = () => {
     .put((req, res) => {
       const logger = req.loggingContext.getLogger('/Application');
       logger.info('>>>>>>>>>>>>>>>>>>>', appEnv.app.application_uris);
-      const tenantHost = `${req.body.subscribedSubdomain}-${appEnv.app.space_name.toLowerCase().replace(/_/g, '-')}-` + 'approuter';
+      const tenantHost = `${req.body.subscribedSubdomain}-${appEnv.app.space_name.toLowerCase().replace(/_/g, '-')}-` + 'easyfranchiseapprouter';
       logger.info('>>>>>>>>>>>>>>>>>>>', tenantHost);
       const tenantUrl = `https://${tenantHost}${/\.(.*)/gm.exec(appEnv.app.application_uris[0])[0]}`;
       logger.info(`-->>>>> ${tenantUrl}`);

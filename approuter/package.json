@@ -6,10 +6,9 @@
     "start": "node node_modules/@sap/approuter/approuter.js"
   },
   "dependencies": {
-    "@sap/approuter": "11.3.2",
-    "@sap/xsenv": "^3.1.1",
-    "@sap/xssec": "^3.2.8",
-    "jwt-decode": "^3.1.2"
+    "@sap/approuter": "11.4.1",
+    "@sap/xsenv": "^3.3.2",
+    "@sap/xssec": "^3.2.13"
   },
   "devDependencies": {},
   "engines": {

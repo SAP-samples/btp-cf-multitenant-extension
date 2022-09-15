@@ -7,7 +7,7 @@ parameters:
   enable-parallel-deployments: true
 modules:
   # DB module    
-  - name: db
+  - name: easyfranchise-db
     type: com.sap.xs.hdi-dynamic
     path: db
     parameters:
@@ -25,7 +25,7 @@ modules:
 #####################
 ## ADMIN DB module ##
 #####################
-  - name: admin-db
+  - name: easyfranchise-admin-db
     type: hdb
     path: admin-db
     parameters:
@@ -36,7 +36,7 @@ modules:
       - name: easyfranchise-tenant-hdiconatiner
 
  # UI module     
-  - name: ui
+  - name: easyfranchise-ui
     type: nodejs
     path: ui/uimodule/webapp
     parameters:
@@ -48,7 +48,7 @@ modules:
           uiurl: ${default-url}
 
  # Admin UI Module     
-  - name: adminui
+  - name: easyfranchise-adminui
     type: nodejs
     path: adminui/uimodule/webapp
     parameters:
@@ -59,7 +59,7 @@ modules:
         properties:
           adminuiurl: ${default-url}
 # Business Partner service
-  - name: business-partner
+  - name: easyfranchise-business-partner
     type: nodejs
     path: businessPartner
     parameters:
@@ -80,7 +80,7 @@ modules:
       searchTerm: EFVERIFIED
       
 # Admin Service
-  - name: admin-srv
+  - name: easyfranchise-admin-srv
     type: nodejs
     path: admin-srv
     parameters:
@@ -102,7 +102,7 @@ modules:
 ## Onboarding Service ####################
 ## Responsible for teanant provisioning ##
 ##########################################
-  - name: onboarding-service
+  - name: easyfranchise-onboarding-service
     type: nodejs
     path: onboardingservice
     parameters:
@@ -131,7 +131,7 @@ modules:
       db_api_user: ~{db_deployment/user}
 
  # Approuter     
-  - name: approuter
+  - name: easyfranchiseapprouter
     type: approuter.nodejs
     path: approuter/ 
     parameters:
