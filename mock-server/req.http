@@ -8,11 +8,12 @@ Content-Type: application/json
 }
 
 ### Post new BP with address
-POST https://<mockserverurl>/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartner
+POST https://<mockserver-url>/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartner
 Content-Type: application/json
 
 {
-    "BusinessPartner":"21312312",
-    "BusinessPartnerFullName":"ad Corp.",
+    "BusinessPartner":"2a312",
+    "BusinessPartnerFullName":"ad Corp as",
+    "FirstName": "GOPS",
     "SearchTerm1" : "EFVERIFIED"
 }
