@@ -24,6 +24,7 @@
     - [Explore APIs & events in SAP API Business Hub](./prepare/explore-apis-and-events/README.md)
     - [Make sure prerequisites are fulfilled and all required systems are in place](./prepare/mission-prerequisites/README.md)
     - [[OPTIONAL] Create a test SAP S/4HANA System Using the SAP Cloud Appliance Library](https://github.com/SAP-samples/cloud-extension-ecc-business-process/blob/mission/mission/cal-setup/CALS4H.md)
+    - [[OPTIONAL] Deploy Mock Server](./prepare/mockserver/README.md)
     
 
 - SET UP
