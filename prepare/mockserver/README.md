@@ -11,7 +11,9 @@ To install the mock server, you need an SAP BTP subaccount with **Cloud Foundry 
 2. Run the command `cf push` in terminal.
 3. Once the application is deployed, Copy the URL of deployed application. 
 4. Go to the **Subscriber Subaccount**
-5. Replace the destination with URL of your mock server. The configuration should look like this:
+5. Replace the destination with URL of your mock server.
+6. Append **v2** at the end of mock server URL as S/4HANA requires OData V2 format data.
+The configuration should look like this:
    ![Mock Destination](./mock%20url.png)
 
 
