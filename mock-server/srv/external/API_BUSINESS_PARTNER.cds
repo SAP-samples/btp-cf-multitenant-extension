@@ -1,6 +1,6 @@
 /* checksum : f1476ee10b11c9ef36e4242b6b0828ff */
 @cds.external : true
-@(path: '/sap/opu/odata/sap/API_BUSINESS_PARTNER')
+@(path: '/v2/sap/opu/odata/sap/API_BUSINESS_PARTNER')
 service API_BUSINESS_PARTNER {};
 @cds.persistence.skip : true
 @sap.label : 'Email Address'
