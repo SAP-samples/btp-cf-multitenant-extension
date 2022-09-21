@@ -79,7 +79,7 @@ mbt build -t ./mta_archives
 
 ### Deploy the MTA Archive
 
-Now, you can deploy the application in your subacccount and space by using the MTAR file you just created:
+Now, you can deploy the application in your subaccount and space by using the MTAR file you just created:
 
 ```cmd
 cd mta_archives
