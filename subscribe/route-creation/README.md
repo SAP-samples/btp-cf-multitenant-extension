@@ -18,7 +18,7 @@ You can create the route automatically or with Cloud Foundry APIs during onboard
 
 7. From the routes list, select the route you created. 
 8. Choose **Actions** > **Map Route**. 
-9. From the **Application** dropdown menu, select **approuter**. Choose **Save**.
+9. From the **Application** dropdown menu, select **easyfranchiseapprouter**. Choose **Save**.
     
    ![Create route](./bind-route.png)
 
