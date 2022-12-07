@@ -42,6 +42,7 @@ The application requires the following entitlements in the SAP BTP cockpit:
 | SaaS Provisioning service         | Application|          1          |
 | Connectivity service              | lite       |          1          |
 | Destination service               | lite       |          1          |
+| SAP Job Scheduling Service.       | Standard.  |          1          |
 
 See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/00aa2c23479d42568b18882b1ca90d79.html?locale=en-US).
 
