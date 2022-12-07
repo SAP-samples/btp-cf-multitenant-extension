@@ -53,5 +53,5 @@ See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403b
 
 ## Prerequisites for SAP HANA Cloud
 
-Make sure that you have an instance of SAP HANA database in your space. For more details, see [Create an SAP HANA Database Instance Using SAP HANA Cloud Central](https://help.sap.com/viewer/9ae9104a46f74a6583ce5182e7fb20cb/hanacloud/en-US/f7febb16072b41f7ac90abf5ea1d4b86.html) in SAP Help Portal.
+Make sure that you have an instance of SAP HANA database in your space. For more details, see [Create an SAP HANA Database Instance Using SAP HANA Cloud Central](https://help.sap.com/docs/HANA_SERVICE_CF/cc53ad464a57404b8d453bbadbc81ceb/21418824b23a401aa116d9ad42dd5ba6.html) in SAP Help Portal.
 
