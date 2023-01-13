@@ -7,7 +7,7 @@ const mentorRouter = () => {
   router.route('/mentor').post(async (req, res) => {
     const logger = req.loggingContext.getLogger('/Application/Network');
     createMentor(req, logger).then((result) => {
-      res.status(200).send('Title Updated');
+      res.status(201).send('Mentor Created');
     }).catch((err) => {
       logger.error(err);
       res.status(500).send(err.message);
