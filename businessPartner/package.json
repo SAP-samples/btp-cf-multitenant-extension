@@ -11,7 +11,7 @@
   "author": "gopal anand",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "@sap/cloud-sdk-op-vdm-business-partner-service": "^2.1.0",
