@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^6",
+    "@sap/cds": "^7",
     "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
     "express": "^4",
     "sqlite3": "^5"
@@ -15,7 +15,7 @@
     "sqlite3": "^5"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "NODE_ENV=development cds run --with-mocks --in-memory"
