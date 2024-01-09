@@ -27,3 +27,14 @@ Each customer needs to have a unique title and icon. To customize the applicatio
 
 Once you're ready with the customization, you can go to the main application. Now, the customized application has its own title and logo uploaded from the admin corner.
 ![Changed Logo](./changedlogo.png)
+
+6. Go to the S/4HANA system and create a new Business Partner.
+7. In the SearchTerm1 fill `EFVERIFIED`Click on Create.
+9. Go to the application.
+10. Select the Refresh icon at the top right of the screen.
+11. Under the New Franchise Tab, the new Business Partner will be visible
+12. From the mentor column, click on the dropdown and select the mentor name.
+13. The Mentor will be assigned to the new Business Partner.
+14. Go to the S/4HANA system, and open the business partner. 
+15. In the `search term`, check if the mentor details are visible. 
+16. This will conclude the flow of the application. 
