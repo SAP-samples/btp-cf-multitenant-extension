@@ -6,26 +6,22 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^7",
-    "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
+    "@cap-js-community/odata-v2-adapter": "^1.11.12",
+    "@sap/cds": "^7.4.0",
     "express": "^4",
-    "sqlite3": "^5"
-  },
-  "devDependencies": {
-    "sqlite3": "^5"
-  },
-  "engines": {
-    "node": "18.x"
+    
+    "@cap-js/sqlite": "^1.4.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development cds run --with-mocks --in-memory"
+    "start": "NODE_ENV=development cds-serve --with-mocks --in-memory"
   },
   "cds": {
     "requires": {
       "db": {
         "kind": "sqlite",
+        "impl": "@cap-js/sqlite",
         "credentials": {
-          "database": ":memory:"
+          "url": "memory"
         }
       },
       "API_BUSINESS_PARTNER": {
