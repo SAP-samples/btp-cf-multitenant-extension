@@ -19,7 +19,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "@sap/hdbext": "^7.2.2",
+    "@sap/hdbext": "^8",
     "@sap/instance-manager": "^3.5.3",
     "@sap/logging": "^6.1.3",
     "@sap/xsenv": "^3.2.2",

@@ -17,7 +17,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "@sap/hana-client": "^2.12.22",
+    "@sap/hana-client": "^2",
     "@sap/instance-manager": "^3.3.5",
     "@sap/jobs-client": "^1.7.30",
     "@sap/logging": "^6.1.3",
