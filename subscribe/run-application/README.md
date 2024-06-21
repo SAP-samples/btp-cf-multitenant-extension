@@ -29,7 +29,8 @@ Once you're ready with the customization, you can go to the main application. No
 ![Changed Logo](./changedlogo.png)
 
 6. Go to the S/4HANA system and create a new Business Partner.
-7. In the SearchTerm1 fill `EFVERIFIED`Click on Create.
+7. To Create a new Business Partner you can follow these [steps](https://github.com/SAP-samples/cloud-extension-ecc-business-process/blob/mission/mission/run-demo/README.md#add-new-business-partner-in-backend)
+8. In the SearchTerm1 fill `EFVERIFIED`Click on Create.
 9. Go to the application.
 10. Select the Refresh icon at the top right of the screen.
 11. Under the New Franchise Tab, the new Business Partner will be visible

@@ -39,3 +39,4 @@ Use the following steps to create an SAP HANA Cloud instance on SAP BTP:
     ![HANA](./images/createDatabase07.png)
 
     The creation of the instance will take some minutes.
+

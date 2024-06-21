@@ -87,7 +87,7 @@ You can manage the trust configurations for a global account only if you've crea
    
    ![User Groups](./images/CustIDP-assertGroup2.png)
 
-21. Repeat the last two steps by mapping the **EasyFranchise** group to all the users that should have access to the Easy Franchise application. 
+20. Repeat the last two steps by mapping the **EasyFranchise** group to all the users that should have access to the Easy Franchise application. 
 
 ### Establish Trust with a Custom SAML 2.0 Identity Provider in Your Subaccount.
 
@@ -108,7 +108,7 @@ You've your company's SAML 2.0 identity provider, for example, the Identity Auth
    ![Configure Trust](./images/CustIDP-configurenewTrust.png)
    
 6. Choose **Upload** to upload metadata file. Choose the tenant metadata file downloaded in **step 3**.
-7. Enter a name. For example, **ExtendUI-Tenant**
+7. Enter a name. For example, **City Scooter**
    
    ![Configure Trust](./images/CustIDP-configurenewTrust1.png)
    
