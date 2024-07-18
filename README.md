@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-cf-multitenant-extension)](https://api.reuse.software/info/github.com/SAP-samples/btp-cf-multitenant-extension)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-cf-multitenant-extension)](https://api.reuse.software/info/github.com/SAP-samples/btp-cf-multitenant-extension)  ![](https://camo.githubusercontent.com/a17303b11eb59064d338c1ccee7ff6c3066c667e109ceff7699c94ffc1612fbe/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5354415455532d4e4f5425323043555252454e544c592532304d41494e5441494e45442d7265642e7376673f6c6f6e6743616368653d74727565267374796c653d666c6174)
 
 
 # Nodejs Multitenant Easyfranchise 
